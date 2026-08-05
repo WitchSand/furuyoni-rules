@@ -1,0 +1,5743 @@
+{
+  "schema_version": 1,
+  "source_pdf_sha256": "b96c743b343d7522db61af03952db73189283816868b8e8747f289a71801ab98",
+  "generated_at": "2026-08-04",
+  "status_policy": {
+    "locked": "用户已于 2026-08-04 批量接受全部 171 条推荐方案；规范正文必须使用推荐简中",
+    "review": "冻结前历史状态：已有推荐方案、等待用户审核",
+    "provisional": "冻结前历史状态：证据不足或冲突显著；21 条当前推荐名已由用户明确接受"
+  },
+  "terms": [
+    {
+      "id": "game.shinmaku",
+      "category": "project_concept",
+      "recommended_zh": "散樱乱武 新幕",
+      "ja": "新幕 桜降る代に決闘を",
+      "aliases": [
+        "新幕散樱乱武",
+        "散樱乱武"
+      ],
+      "strict_definition": "本综合规则所规制的一局《新幕 桜降る代に決闘を》游戏。",
+      "plain_explanation": "本项目翻译的游戏及规则版本名称。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 2,
+          "rule": "1-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "steam-radiant-duels-zh-hans",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "game.dual-palm-selection",
+      "category": "project_concept",
+      "recommended_zh": "双掌缭乱",
+      "ja": "双掌繚乱",
+      "aliases": [],
+      "strict_definition": "双方各自选择并公开两柱编号不同的女神的步骤。",
+      "plain_explanation": "开局先选两位女神。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 2,
+          "rule": "2-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "steam-radiant-duels-zh-hans",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "game.frontline-deckbuilding",
+      "category": "project_concept",
+      "recommended_zh": "眼前构筑",
+      "ja": "眼前構築",
+      "aliases": [
+        "眼前组牌"
+      ],
+      "strict_definition": "从所宿女神的可用牌中秘密选择七张通常牌和三张王牌的步骤。",
+      "plain_explanation": "看到双方女神后现场组出十张牌。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 3,
+          "rule": "3-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "steam-radiant-duels-zh-hans",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "game.sakura-duel",
+      "category": "project_concept",
+      "recommended_zh": "樱花决斗",
+      "ja": "桜花決闘",
+      "aliases": [
+        "樱花对决"
+      ],
+      "strict_definition": "完成双掌缭乱与眼前构筑后，依核心规则进行胜负判定的对战阶段。",
+      "plain_explanation": "真正打牌并决出胜负的部分。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 3,
+          "rule": "4-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "steam-radiant-duels-zh-hans",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "社区亦见“樱花对决”；推荐名沿用受监修项目的“樱花决斗”。"
+    },
+    {
+      "id": "actor.goddess",
+      "category": "project_concept",
+      "recommended_zh": "女神",
+      "ja": "メガミ",
+      "aliases": [
+        "柱"
+      ],
+      "strict_definition": "女神列表所列、可与卡牌使用者及追加规则关联的游戏要素。",
+      "plain_explanation": "玩家选择并借用力量的角色。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 2,
+          "rule": "2-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "steam-radiant-duels-zh-hans",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "actor.mikoto",
+      "category": "project_concept",
+      "recommended_zh": "尊者",
+      "ja": "ミコト",
+      "aliases": [
+        "御子"
+      ],
+      "strict_definition": "世界观中能够借用女神力量进行樱花决斗的人。",
+      "plain_explanation": "对局中玩家所扮演的决斗者身份。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 2,
+          "rule": "1-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "steam-radiant-duels-zh-hans",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "object.sakura-crystal",
+      "category": "project_concept",
+      "recommended_zh": "樱花结晶",
+      "ja": "桜花結晶",
+      "aliases": [
+        "樱花指示物"
+      ],
+      "strict_definition": "在各区域之间移动、用以表示距离、防护、生命和费用等数值的实体对象。",
+      "plain_explanation": "版图上流转的花瓣资源。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 12,
+          "rule": "6-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "steam-radiant-duels-zh-hans",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.distance",
+      "category": "region_resource",
+      "recommended_zh": "距离",
+      "ja": "間合",
+      "aliases": [
+        "距",
+        "间合"
+      ],
+      "strict_definition": "共有区域＜間合＞中樱花结晶的数量及由此表示的当前距离。",
+      "plain_explanation": "中间有几颗结晶，当前距离就是几。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 15,
+          "rule": "7-1-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "steam-radiant-duels-zh-hans",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "旧译和日式玩家口语常保留“间合”；受监修简中项目使用“距离”。"
+    },
+    {
+      "id": "zone.life",
+      "category": "region_resource",
+      "recommended_zh": "命",
+      "ja": "ライフ",
+      "aliases": [
+        "生命",
+        "血",
+        "自命"
+      ],
+      "strict_definition": "与玩家关联的＜ライフ＞区域及其中结晶数；满足规则条件时决定败北。",
+      "plain_explanation": "玩家的生命值。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 15,
+          "rule": "7-1-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.aura",
+      "category": "region_resource",
+      "recommended_zh": "装",
+      "ja": "オーラ",
+      "aliases": [
+        "护盾",
+        "自装"
+      ],
+      "strict_definition": "与玩家关联的＜オーラ＞区域，通常承受攻击的装伤害。",
+      "plain_explanation": "先替命挡伤害的防护区。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 15,
+          "rule": "7-1-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.flare",
+      "category": "region_resource",
+      "recommended_zh": "气",
+      "ja": "フレア",
+      "aliases": [
+        "能量",
+        "自气"
+      ],
+      "strict_definition": "与玩家关联的＜フレア＞区域，主要用于支付王牌的消耗。",
+      "plain_explanation": "发动王牌时花费的能量。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 15,
+          "rule": "7-1-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.dust",
+      "category": "region_resource",
+      "recommended_zh": "虚",
+      "ja": "ダスト",
+      "aliases": [
+        "弃晶区",
+        "尘"
+      ],
+      "strict_definition": "双方共有的＜ダスト＞区域，容纳未处于其他区域的游戏内樱花结晶。",
+      "plain_explanation": "结晶流转时常汇入、再从中取出的公共池。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 15,
+          "rule": "7-1-5"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.draw-pile",
+      "category": "region_resource",
+      "recommended_zh": "牌库",
+      "ja": "山札",
+      "aliases": [
+        "山札",
+        "抽牌堆"
+      ],
+      "strict_definition": "与玩家关联、由背面朝上的通常牌按顺序构成的＜山札＞区域。",
+      "plain_explanation": "每回合从这里抽牌。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 16,
+          "rule": "7-1-6"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.discard",
+      "category": "region_resource",
+      "recommended_zh": "弃牌区",
+      "ja": "捨て札",
+      "aliases": [
+        "弃牌",
+        "捨札"
+      ],
+      "strict_definition": "与玩家关联、通常放置已使用且表面朝上的通常牌的＜捨て札＞区域。",
+      "plain_explanation": "打过的通常牌正面朝上放这里。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 16,
+          "rule": "7-1-7"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.covered",
+      "category": "region_resource",
+      "recommended_zh": "盖牌区",
+      "ja": "伏せ札",
+      "aliases": [
+        "伏牌区",
+        "盖牌"
+      ],
+      "strict_definition": "与玩家关联、通常放置表面朝下的通常牌的＜伏せ札＞区域。",
+      "plain_explanation": "作为动作代价盖掉或被效果盖伏的牌放这里。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 16,
+          "rule": "7-1-8"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.enchantment",
+      "category": "region_resource",
+      "recommended_zh": "付与牌区",
+      "ja": "付与札",
+      "aliases": [
+        "付与区",
+        "付与札"
+      ],
+      "strict_definition": "放置正在展开的付与牌及其纳的＜付与札＞区域。",
+      "plain_explanation": "持续生效的付与牌摆放区。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 17,
+          "rule": "7-1-9"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "“付与札”既可被理解为牌也可被理解为区域；推荐加“牌区”消歧。"
+    },
+    {
+      "id": "zone.hand",
+      "category": "region_resource",
+      "recommended_zh": "手牌",
+      "ja": "手札",
+      "aliases": [
+        "手札"
+      ],
+      "strict_definition": "与玩家关联、由该玩家持有且通常仅自己可见的＜手札＞区域。",
+      "plain_explanation": "拿在手里、可以使用或盖伏的牌。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 17,
+          "rule": "7-1-10"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.trump",
+      "category": "region_resource",
+      "recommended_zh": "王牌区",
+      "ja": "切札",
+      "aliases": [
+        "切札区"
+      ],
+      "strict_definition": "与玩家关联、放置其王牌并记录未使用或使用后状态的＜切札＞区域。",
+      "plain_explanation": "三张王牌所在的区域。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 17,
+          "rule": "7-1-11"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "steam-radiant-duels-zh-hans",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.extra",
+      "category": "region_resource",
+      "recommended_zh": "追加牌区",
+      "ja": "追加札",
+      "aliases": [
+        "追加区",
+        "追加札"
+      ],
+      "strict_definition": "放置眼前构筑不能直接选用、由追加规则或效果带入的卡牌的＜追加札＞区域。",
+      "plain_explanation": "衍生牌和专用牌的备用区。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 18,
+          "rule": "7-1-12"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.sealed",
+      "category": "region_resource",
+      "recommended_zh": "封印区",
+      "ja": "封印",
+      "aliases": [
+        "封印"
+      ],
+      "strict_definition": "放置被封印卡牌的＜封印＞区域；其公开性与移动依核心规则处理。",
+      "plain_explanation": "被封印的牌暂时放这里。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 18,
+          "rule": "7-1-13"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.in-use",
+      "category": "region_resource",
+      "recommended_zh": "使用中",
+      "ja": "使用中",
+      "aliases": [
+        "使用中区"
+      ],
+      "strict_definition": "卡牌使用与效果结算期间暂时存在的＜使用中＞区域。",
+      "plain_explanation": "一张牌正在结算时所在的位置。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 18,
+          "rule": "7-1-14"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "zone.attack-in-progress",
+      "category": "region_resource",
+      "recommended_zh": "攻击中区",
+      "ja": "攻撃中",
+      "aliases": [
+        "攻击中",
+        "攻击处理区"
+      ],
+      "strict_definition": "与玩家关联、在攻击生成与结算期间暂时容纳攻击对象的＜攻撃中＞区域。",
+      "plain_explanation": "一次攻击正在处理时所在的区域。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 18,
+          "rule": "7-1-15"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "底本可确定区域语义，但未取得可复核简中用名；“攻击中区”“攻击处理区”与直留“攻击中”均需裁决。"
+    },
+    {
+      "id": "zone.out-of-game",
+      "category": "region_resource",
+      "recommended_zh": "游戏外",
+      "ja": "ゲーム外",
+      "aliases": [
+        "移出区",
+        "除外区"
+      ],
+      "strict_definition": "不属于通常对局内区域流转、由规则指定放置对象的＜ゲーム外＞区域。",
+      "plain_explanation": "暂时不在正常游戏区域中的对象。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 18,
+          "rule": "7-1-16"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "resource.vigor",
+      "category": "region_resource",
+      "recommended_zh": "集中力",
+      "ja": "集中力",
+      "aliases": [
+        "专注力"
+      ],
+      "strict_definition": "玩家持有、通常在 0 至 2 之间，用于执行基本动作的公开数值。",
+      "plain_explanation": "不盖牌时，用它支付基本动作。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 4,
+          "rule": "5-1-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "range.mastery",
+      "category": "region_resource",
+      "recommended_zh": "达人距离",
+      "ja": "達人の間合",
+      "aliases": [
+        "达人距",
+        "近身距离",
+        "达人间合"
+      ],
+      "strict_definition": "当前距离不大于规则阈值时成立的状态，影响前进与离脱。",
+      "plain_explanation": "贴得足够近时进入的特殊距离状态。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 6,
+          "rule": "5-2-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "社区常说“达人距”，旧注称官中曾用“近身距离”；推荐“达人距离”兼顾原义与可读性。"
+    },
+    {
+      "id": "card.card",
+      "category": "card_type",
+      "recommended_zh": "卡牌",
+      "ja": "カード",
+      "aliases": [
+        "牌"
+      ],
+      "strict_definition": "女神列表所列、由实体卡片表示的卡牌对象。",
+      "plain_explanation": "构筑和对局中使用的牌。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 2,
+          "rule": "1-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "steam-radiant-duels-zh-hans",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "card.deck",
+      "category": "card_type",
+      "recommended_zh": "牌组",
+      "ja": "デッキ",
+      "aliases": [
+        "卡组",
+        "套牌"
+      ],
+      "strict_definition": "玩家在眼前构筑中选出的七张通常牌和三张王牌的总称。",
+      "plain_explanation": "本局带入的十张牌。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 6,
+          "rule": "5-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "steam-radiant-duels-zh-hans",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "Steam 同页同时使用“牌组”和“卡组”；推荐“牌组”，将“卡组”保留为检索别名。"
+    },
+    {
+      "id": "card.normal",
+      "category": "card_type",
+      "recommended_zh": "通常牌",
+      "ja": "通常札",
+      "aliases": [
+        "通常札",
+        "普通牌"
+      ],
+      "strict_definition": "分类为通常札、参与牌库重铸和抽牌循环的卡牌。",
+      "plain_explanation": "会洗回牌库循环使用的七张牌。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 10,
+          "rule": "6-2-1-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "Fandom 表格常直接保留“通常札”；推荐“通常牌”以符合简中习惯。"
+    },
+    {
+      "id": "card.trump",
+      "category": "card_type",
+      "recommended_zh": "王牌",
+      "ja": "切札",
+      "aliases": [
+        "切札",
+        "大招"
+      ],
+      "strict_definition": "分类为切札、通常支付消耗后使用并记录使用状态的卡牌。",
+      "plain_explanation": "构筑时选三张、花费气使用的强力牌。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 10,
+          "rule": "6-2-1-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "steam-radiant-duels-zh-hans",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "card.type.attack",
+      "category": "card_type",
+      "recommended_zh": "攻击",
+      "ja": "攻撃",
+      "aliases": [
+        "红牌"
+      ],
+      "strict_definition": "卡牌类型《攻撃》，使用时生成攻击对象并依攻击流程结算。",
+      "plain_explanation": "造成装或命伤害的牌型。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 10,
+          "rule": "6-2-1-5"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "card.type.action",
+      "category": "card_type",
+      "recommended_zh": "行动",
+      "ja": "行動",
+      "aliases": [
+        "蓝牌"
+      ],
+      "strict_definition": "卡牌类型《行動》，依行动牌使用步骤结算文本。",
+      "plain_explanation": "直接执行效果的牌型。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 10,
+          "rule": "6-2-1-5"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "card.type.enchantment",
+      "category": "card_type",
+      "recommended_zh": "付与",
+      "ja": "付与",
+      "aliases": [
+        "绿牌",
+        "赋予"
+      ],
+      "strict_definition": "卡牌类型《付与》，放入付与牌区并以纳上的结晶维持展开。",
+      "plain_explanation": "会留在场上一段时间、持续生效的牌型。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 10,
+          "rule": "6-2-1-5"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "“赋予”更现代，但社区与旧规则长期使用“付与”；推荐保留专名。"
+    },
+    {
+      "id": "card.type.undefined",
+      "category": "card_type",
+      "recommended_zh": "不定",
+      "ja": "不定",
+      "aliases": [],
+      "strict_definition": "卡牌类型《不定》，其实际使用方式由规则或效果决定。",
+      "plain_explanation": "需要看额外规则才知道怎么用的牌型。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 10,
+          "rule": "6-2-1-5"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "card.subtype.response",
+      "category": "card_type",
+      "recommended_zh": "对应",
+      "ja": "対応",
+      "aliases": [
+        "响应",
+        "康"
+      ],
+      "strict_definition": "卡牌副类型《対応》，可在规则允许的攻击对应窗口中使用。",
+      "plain_explanation": "对手攻击时可以打出的响应牌。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 11,
+          "rule": "6-2-1-6"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "card.subtype.full-power",
+      "category": "card_type",
+      "recommended_zh": "全力",
+      "ja": "全力",
+      "aliases": [
+        "全力牌"
+      ],
+      "strict_definition": "卡牌副类型《全力》，其使用受主要阶段与全力行动规则限制。",
+      "plain_explanation": "通常会占掉主要阶段大部分行动机会的强牌。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 11,
+          "rule": "6-2-1-6"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "card.cost",
+      "category": "card_type",
+      "recommended_zh": "消耗",
+      "ja": "消費",
+      "aliases": [
+        "费用",
+        "cost"
+      ],
+      "strict_definition": "王牌持有的数值信息，通常以从气移出相同数量结晶的方式支付。",
+      "plain_explanation": "打出王牌要花多少气。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 11,
+          "rule": "6-2-1-12"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "card.capacity",
+      "category": "card_type",
+      "recommended_zh": "纳",
+      "ja": "納",
+      "aliases": [
+        "献",
+        "容纳值"
+      ],
+      "strict_definition": "付与牌所持、决定展开时放置多少樱花结晶的数值信息。",
+      "plain_explanation": "付与牌能放几颗结晶，也大致决定能维持多久。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 11,
+          "rule": "6-2-1-11"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "旧注称既有官中曾用“献”，当前社区普遍使用“纳”；建议采用“纳”。"
+    },
+    {
+      "id": "attack.proper-range",
+      "category": "card_type",
+      "recommended_zh": "攻击距离",
+      "ja": "適正距離",
+      "aliases": [
+        "适正距离",
+        "适当距离",
+        "射程"
+      ],
+      "strict_definition": "攻击对象持有的距离集合；结算时当前距离属于该集合才视为距离适正。",
+      "plain_explanation": "这次攻击在哪些距离能命中。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 13,
+          "rule": "6-4-1-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "直译可作“适正距离”，旧译作“适当距离”；社区解释长期使用“攻击距离”。"
+    },
+    {
+      "id": "attack.damage",
+      "category": "card_type",
+      "recommended_zh": "伤害",
+      "ja": "ダメージ",
+      "aliases": [
+        "打点"
+      ],
+      "strict_definition": "攻击对象持有的装伤害／命伤害二元值，或规则定义的单一值伤害。",
+      "plain_explanation": "攻击写成 X/Y 时，前者打装、后者打命。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 8,
+          "rule": "5-8"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "effect.rule-based",
+      "category": "effect_class",
+      "recommended_zh": "规则上效果",
+      "ja": "ルール上効果",
+      "aliases": [
+        "规则效果"
+      ],
+      "strict_definition": "由综合规则或追加规则直接定义、并由规则赋予游戏的效果分类。",
+      "plain_explanation": "不是写在某张牌上，而是规则本身给出的效果。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 21,
+          "rule": "9-1-1-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "effect.constant",
+      "category": "effect_class",
+      "recommended_zh": "常时",
+      "ja": "常時",
+      "aliases": [
+        "持续"
+      ],
+      "strict_definition": "只要其来源与规则条件有效便持续适用的【常時】效果。",
+      "plain_explanation": "满足条件时一直生效。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 21,
+          "rule": "9-1-1-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "effect.on-use",
+      "category": "effect_class",
+      "recommended_zh": "使用时",
+      "ja": "使用時",
+      "aliases": [],
+      "strict_definition": "卡牌被使用时按规则时点进入待解决流程的【使用時】效果。",
+      "plain_explanation": "打出这张牌时触发。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 22,
+          "rule": "9-1-1-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "effect.after-attack",
+      "category": "effect_class",
+      "recommended_zh": "攻击后",
+      "ja": "攻撃後",
+      "aliases": [],
+      "strict_definition": "攻击结算完毕后按规则时点解决的【攻撃後】效果。",
+      "plain_explanation": "这次攻击处理完后触发。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 22,
+          "rule": "9-1-1-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "effect.on-deploy",
+      "category": "effect_class",
+      "recommended_zh": "展开时",
+      "ja": "展開時",
+      "aliases": [],
+      "strict_definition": "付与牌进入付与牌区并完成展开时解决的【展開時】效果。",
+      "plain_explanation": "付与牌刚放上场时触发。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 22,
+          "rule": "9-1-1-5"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "effect.while-deployed",
+      "category": "effect_class",
+      "recommended_zh": "展开中",
+      "ja": "展開中",
+      "aliases": [],
+      "strict_definition": "付与牌在付与牌区展开期间持续适用的【展開中】效果。",
+      "plain_explanation": "这张付与牌留在场上时一直生效。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 22,
+          "rule": "9-1-1-6"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "effect.on-discard",
+      "category": "effect_class",
+      "recommended_zh": "破弃时",
+      "ja": "破棄時",
+      "aliases": [
+        "破弃",
+        "弃置时"
+      ],
+      "strict_definition": "付与牌因纳耗尽而从付与牌区破弃时解决的【破棄時】效果。",
+      "plain_explanation": "付与牌结束并离场时触发。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 22,
+          "rule": "9-1-1-7"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "“破弃”是社区专名但不够口语；“弃置时”易与一般弃牌混淆。"
+    },
+    {
+      "id": "effect.while-used",
+      "category": "effect_class",
+      "recommended_zh": "使用后",
+      "ja": "使用済",
+      "aliases": [
+        "已使用"
+      ],
+      "strict_definition": "仅当其来源王牌处于使用后状态时才会被参照的【使用済】效果。",
+      "plain_explanation": "王牌开过以后持续或按条件生效的效果。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 22,
+          "rule": "9-1-1-8"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "phase.beginning",
+      "category": "phase_action",
+      "recommended_zh": "开始阶段",
+      "ja": "開始フェイズ",
+      "aliases": [
+        "准备阶段",
+        "开始阶段"
+      ],
+      "strict_definition": "回合的第一个阶段，依 8-1 顺序处理开始阶段步骤。",
+      "plain_explanation": "每回合最先进行重铸、抽牌等处理的阶段。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 19,
+          "rule": "8-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "社区 FAQ 常用“准备阶段”，旧译与日文直译为“开始阶段”；建议规范正文使用“开始阶段”。"
+    },
+    {
+      "id": "phase.main",
+      "category": "phase_action",
+      "recommended_zh": "主要阶段",
+      "ja": "メインフェイズ",
+      "aliases": [
+        "主阶段"
+      ],
+      "strict_definition": "开始阶段后、结束阶段前，玩家执行基本动作或使用卡牌的阶段。",
+      "plain_explanation": "回合中主要操作和出牌的阶段。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 20,
+          "rule": "8-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "phase.ending",
+      "category": "phase_action",
+      "recommended_zh": "结束阶段",
+      "ja": "終了フェイズ",
+      "aliases": [
+        "结束阶段"
+      ],
+      "strict_definition": "主要阶段后，按 8-3 处理结束阶段步骤并结束回合的阶段。",
+      "plain_explanation": "回合收尾、处理结束触发的阶段。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 20,
+          "rule": "8-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "action.standard",
+      "category": "phase_action",
+      "recommended_zh": "标准行动",
+      "ja": "標準行動",
+      "aliases": [
+        "普通行动"
+      ],
+      "strict_definition": "主要阶段开始时可选的行动方式；可反复使用非全力牌或进行基本动作，直至主动或被效果结束主要阶段。",
+      "plain_explanation": "普通回合模式，可以连续出牌和做基本动作。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 20,
+          "rule": "8-2-2 A"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "action.full-power",
+      "category": "phase_action",
+      "recommended_zh": "全力行动",
+      "ja": "全力行動",
+      "aliases": [
+        "全力回合"
+      ],
+      "strict_definition": "主要阶段开始时可选的行动方式；使用一张手牌或未使用王牌并完成相关效果后结束主要阶段。",
+      "plain_explanation": "选择全力模式后通常只做一次出牌行动。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 20,
+          "rule": "8-2-2 B"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "action.basic",
+      "category": "phase_action",
+      "recommended_zh": "基本动作",
+      "ja": "基本動作",
+      "aliases": [],
+      "strict_definition": "规则列举的前进、后退、装附、聚气及满足条件时的离脱。",
+      "plain_explanation": "花 1 集中力或盖 1 张牌来做的五种基础操作。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 27,
+          "rule": "9-6"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "action.advance",
+      "category": "phase_action",
+      "recommended_zh": "前进",
+      "ja": "前進",
+      "aliases": [],
+      "strict_definition": "基本动作：按规则将一枚樱花结晶从距离移至自己的装。",
+      "plain_explanation": "拉近距离并补一装。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 28,
+          "rule": "9-6-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "action.retreat",
+      "category": "phase_action",
+      "recommended_zh": "后退",
+      "ja": "後退",
+      "aliases": [],
+      "strict_definition": "基本动作：按规则将一枚樱花结晶从自己的装移至距离。",
+      "plain_explanation": "花一装把距离拉远。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 28,
+          "rule": "9-6-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "action.ward",
+      "category": "phase_action",
+      "recommended_zh": "装附",
+      "ja": "纏い",
+      "aliases": [
+        "缠绕",
+        "装付"
+      ],
+      "strict_definition": "基本动作：按规则将一枚樱花结晶从虚移至自己的装。",
+      "plain_explanation": "从虚补一装。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 28,
+          "rule": "9-6-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "社区同时出现“装附”和“装付”；建议用“装附”，与区域简称“装”及附着含义一致。"
+    },
+    {
+      "id": "action.channel",
+      "category": "phase_action",
+      "recommended_zh": "聚气",
+      "ja": "宿し",
+      "aliases": [
+        "蓄气",
+        "宿"
+      ],
+      "strict_definition": "基本动作：按规则将一枚樱花结晶从自己的装移至自己的气。",
+      "plain_explanation": "把一装转成一气。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 28,
+          "rule": "9-6-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "action.disengage",
+      "category": "phase_action",
+      "recommended_zh": "离脱",
+      "ja": "離脱",
+      "aliases": [],
+      "strict_definition": "处于达人距离时取代前进的基本动作，按规则将一枚结晶从虚移至距离。",
+      "plain_explanation": "贴身时用来把距离拉开一格。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 28,
+          "rule": "9-6-5"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "action.reconstruct",
+      "category": "phase_action",
+      "recommended_zh": "重铸牌库",
+      "ja": "山札の再構成",
+      "aliases": [
+        "牌库重铸",
+        "牌库重组",
+        "洗牌"
+      ],
+      "strict_definition": "若由规则生成，先令该玩家的命承受 1 点伤害；再将其弃牌区与盖牌区的全部通常牌移入牌库并洗牌。",
+      "plain_explanation": "把弃牌和盖牌洗回牌库；规则强制重铸时还会损失命。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 29,
+          "rule": "9-7"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "“牌库重组”更直译；两项独立社区来源共同使用“重铸牌库”。"
+    },
+    {
+      "id": "resolution.nested",
+      "category": "phase_action",
+      "recommended_zh": "嵌套结算",
+      "ja": "入れ子解決",
+      "aliases": [
+        "入嵌结算"
+      ],
+      "strict_definition": "某效果解决期间发生另一效果时，先完整解决后发生的效果，再返回原效果。",
+      "plain_explanation": "结算中又触发新东西时，先把里面那层做完。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 29,
+          "rule": "9-8"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "state.flinched",
+      "category": "rule_keyword",
+      "recommended_zh": "畏缩",
+      "ja": "畏縮",
+      "aliases": [
+        "畏缩状态"
+      ],
+      "strict_definition": "玩家可持有的公开状态；畏缩玩家将要获得集中力时，改为解除畏缩。",
+      "plain_explanation": "下次本该获得集中力时，先用来解除这个状态。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 4,
+          "rule": "5-1-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "state.unused",
+      "category": "rule_keyword",
+      "recommended_zh": "未使用状态",
+      "ja": "未使用",
+      "aliases": [],
+      "strict_definition": "王牌可持有、允许其按通常条件使用的状态。",
+      "plain_explanation": "这张王牌还可以开。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 12,
+          "rule": "6-2-2-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "state.in-use",
+      "category": "rule_keyword",
+      "recommended_zh": "使用中状态",
+      "ja": "使用中",
+      "aliases": [
+        "结算中"
+      ],
+      "strict_definition": "王牌从被使用到完成相应移动前可持有的中间状态。",
+      "plain_explanation": "这张王牌正在结算。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 12,
+          "rule": "6-2-2-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "state.used",
+      "category": "rule_keyword",
+      "recommended_zh": "使用后状态",
+      "ja": "使用済",
+      "aliases": [
+        "已使用",
+        "使用完毕"
+      ],
+      "strict_definition": "王牌在王牌区内可能具有的已使用状态，与未使用状态相对。",
+      "plain_explanation": "这张王牌本局已经开过，暂时不能再用。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 12,
+          "rule": "6-2-2-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "社区把状态简称为“使用后”，但该词也像时点；建议数据与正文写“使用后状态”。"
+    },
+    {
+      "id": "rule.owner",
+      "category": "rule_keyword",
+      "recommended_zh": "所有者",
+      "ja": "保有者",
+      "aliases": [
+        "保有者",
+        "持有者"
+      ],
+      "strict_definition": "规则为每张卡牌确定的归属玩家；区域移动等规则可据此引用与该玩家关联的区域。",
+      "plain_explanation": "这张牌在规则上属于谁。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 6,
+          "rule": "5-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "旧译为“保有者”；“持有者”易误解为当前拿在手中的玩家，建议用“所有者”。"
+    },
+    {
+      "id": "rule.object",
+      "category": "rule_keyword",
+      "recommended_zh": "对象",
+      "ja": "オブジェクト",
+      "aliases": [
+        "游戏对象"
+      ],
+      "strict_definition": "卡牌、樱花结晶和攻击等在规则中可持有信息和状态的事物总称。",
+      "plain_explanation": "规则会追踪信息和状态的东西。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 10,
+          "rule": "6-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "rule.information",
+      "category": "rule_keyword",
+      "recommended_zh": "信息",
+      "ja": "情報",
+      "aliases": [
+        "情报"
+      ],
+      "strict_definition": "规则可由玩家、对象或区域持有并被公开或隐藏的属性。",
+      "plain_explanation": "游戏需要记录或查看的属性。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 10,
+          "rule": "6-2-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "旧译用“情报”；简中规则文体通常用“信息”。"
+    },
+    {
+      "id": "rule.zone",
+      "category": "rule_keyword",
+      "recommended_zh": "区域",
+      "ja": "領域",
+      "aliases": [
+        "领域"
+      ],
+      "strict_definition": "对象在樱花决斗中可以存在、并由规则定义其容纳对象与状态的位置。",
+      "plain_explanation": "牌或结晶能待的规则位置。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 14,
+          "rule": "7-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "rule.impatience",
+      "category": "rule_keyword",
+      "recommended_zh": "焦躁",
+      "ja": "焦燥",
+      "aliases": [
+        "焦燥"
+      ],
+      "strict_definition": "抽牌时牌库为空所引发的状态触发处理；承受装 1／命 1 的伤害，并依伤害规则从中选择。",
+      "plain_explanation": "没牌可抽时受到的一次 1/1 牌库耗尽惩罚。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 7,
+          "rule": "5-5-3"
+        },
+        {
+          "part": "core",
+          "pdf_page": 32,
+          "rule": "10-10"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "日文原词写作“焦燥”；简中社区使用常用字形“焦躁”。推荐正文用“焦躁”，保留原词供检索。"
+    },
+    {
+      "id": "rule.situation-based",
+      "category": "rule_keyword",
+      "recommended_zh": "状态触发处理",
+      "ja": "状況起因",
+      "aliases": [
+        "状况起因",
+        "状态触发"
+      ],
+      "strict_definition": "不由玩家选择发动、在规则条件成立时依优先顺序自动检查并解决的处理。",
+      "plain_explanation": "条件一满足就自动检查并处理的规则事件。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 6,
+          "rule": "5-5"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "旧译“状况起因”生硬；“状态触发处理”更清晰，但尚无高等级简中证据。"
+    },
+    {
+      "id": "rule.full-power-augmentation",
+      "category": "rule_keyword",
+      "recommended_zh": "全力化",
+      "ja": "全力化",
+      "aliases": [],
+      "strict_definition": "效果持有的信息；含该信息的效果仅在卡牌通过全力行动使用时有效。",
+      "plain_explanation": "用全力行动打牌时才开启的增强文本。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 22,
+          "rule": "9-1-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "keyword.gap",
+      "category": "rule_keyword",
+      "recommended_zh": "破绽",
+      "ja": "隙",
+      "aliases": [
+        "隙"
+      ],
+      "strict_definition": "付与牌持有的展开中效果：其所有者受到非牌库重铸来源的至少 1 点命伤害时，将该牌盖伏，再把牌上的全部樱花结晶移至虚。",
+      "plain_explanation": "挂着这张付与时一旦命受伤，它会立即盖伏并失去上面的结晶。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 31,
+          "rule": "10-6"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "keyword.overwhelm",
+      "category": "rule_keyword",
+      "recommended_zh": "超克",
+      "ja": "超克",
+      "aliases": [],
+      "strict_definition": "使攻击的装伤害不受通常装上限替代规则限制的关键字。",
+      "plain_explanation": "大装伤不能只用满装挡住。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 34,
+          "rule": "10-21"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "keyword.terminal",
+      "category": "rule_keyword",
+      "recommended_zh": "终端",
+      "ja": "終端",
+      "aliases": [
+        "终止"
+      ],
+      "strict_definition": "带有终端的卡牌结算后，其使用者在该回合不能再使用其他卡牌或进行基本动作。",
+      "plain_explanation": "处理完它后，本回合不能再出牌或做基本动作。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 24,
+          "rule": "9-2（卡牌使用后的终端处理）"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "keyword.unrespondable",
+      "category": "rule_keyword",
+      "recommended_zh": "不可对应",
+      "ja": "対応不可",
+      "aliases": [
+        "不可被对应",
+        "不可对"
+      ],
+      "strict_definition": "攻击持有的常时效果；对该攻击使用对应牌时，不能选择符合括号内指定信息的牌，“不可对应”是“不可对应（全部）”的略记。",
+      "plain_explanation": "括号写了哪类牌，对手就不能用那类对应牌；不带括号时全部禁用。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 34,
+          "rule": "10-22"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "社区常说“不可被对应”；推荐标签式“不可对应”，句中可依语法写“不可被对应”。"
+    },
+    {
+      "id": "keyword.unavoidable",
+      "category": "rule_keyword",
+      "recommended_zh": "不可闪避",
+      "ja": "不可避",
+      "aliases": [
+        "不可避",
+        "锁定"
+      ],
+      "strict_definition": "攻击持有的规则信息；在对应窗口之后，该攻击直接视为成功，不再重新检查当前距离是否属于攻击距离。",
+      "plain_explanation": "不能靠对应后跳出攻击距离来躲掉。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 27,
+          "rule": "9-4 ⅲ"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "旧注称既有官中用“锁定”，社区也用“不可避／不可闪避”；推荐语义透明的“不可闪避”。"
+    },
+    {
+      "id": "keyword.recover",
+      "category": "rule_keyword",
+      "recommended_zh": "再起",
+      "ja": "再起",
+      "aliases": [],
+      "strict_definition": "王牌持有的使用后效果；在所有者的结束阶段满足牌面条件时，将该牌变为未使用。",
+      "plain_explanation": "结束阶段达成条件，就能把王牌重新开一次。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 31,
+          "rule": "10-7"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "keyword.immediate-recover",
+      "category": "rule_keyword",
+      "recommended_zh": "即再起",
+      "ja": "即再起",
+      "aliases": [],
+      "strict_definition": "王牌持有的使用后效果；牌面条件成立时立即将该牌变为未使用。",
+      "plain_explanation": "条件一满足，王牌马上恢复。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 31,
+          "rule": "10-8"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "keyword.arrow",
+      "category": "rule_keyword",
+      "recommended_zh": "箭头效果",
+      "ja": "矢印効果",
+      "aliases": [
+        "箭头"
+      ],
+      "strict_definition": "以区域图、箭头和结晶数量共同表示樱花结晶移动的规则效果。",
+      "plain_explanation": "把结晶按箭头从一处移到另一处。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 29,
+          "rule": "10-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "keyword.range-expand-far",
+      "category": "rule_keyword",
+      "recommended_zh": "距离扩大（远）",
+      "ja": "距離拡大（遠）",
+      "aliases": [
+        "远增",
+        "远 X"
+      ],
+      "strict_definition": "从攻击距离集合的最大值起，向更远侧增加 X 个连续整数的修正。",
+      "plain_explanation": "把能打到的最远距离往外扩。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 30,
+          "rule": "10-4-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "keyword.range-expand-near",
+      "category": "rule_keyword",
+      "recommended_zh": "距离扩大（近）",
+      "ja": "距離拡大（近）",
+      "aliases": [
+        "近增",
+        "近 X"
+      ],
+      "strict_definition": "从攻击距离集合的最小值起，向更近侧增加 X 个连续非负整数的修正。",
+      "plain_explanation": "把能打到的最近距离往内扩。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 30,
+          "rule": "10-4-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "keyword.range-shrink-far",
+      "category": "rule_keyword",
+      "recommended_zh": "距离缩小（远）",
+      "ja": "距離縮小（遠）",
+      "aliases": [
+        "远减"
+      ],
+      "strict_definition": "从攻击距离集合的最大值起移除 X 个连续整数的修正。",
+      "plain_explanation": "削掉最远侧的一段攻击距离。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 31,
+          "rule": "10-4-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "keyword.range-shrink-near",
+      "category": "rule_keyword",
+      "recommended_zh": "距离缩小（近）",
+      "ja": "距離縮小（近）",
+      "aliases": [
+        "近减"
+      ],
+      "strict_definition": "从攻击距离集合的最小值起移除 X 个连续整数的修正。",
+      "plain_explanation": "削掉最近侧的一段攻击距离。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 30,
+          "rule": "10-4-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "resolution.cancel",
+      "category": "rule_keyword",
+      "recommended_zh": "打消",
+      "ja": "打ち消す",
+      "aliases": [
+        "无效",
+        "康掉"
+      ],
+      "strict_definition": "使攻击、其伤害或攻击后效果在攻击结算的相应步骤不再按原流程解决的规则处理。",
+      "plain_explanation": "让那次攻击或其中一部分不生效。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 27,
+          "rule": "9-4 ⅱ／ⅳ／ⅵ"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "action.remove",
+      "category": "rule_keyword",
+      "recommended_zh": "移出游戏",
+      "ja": "取り除く",
+      "aliases": [
+        "除外"
+      ],
+      "strict_definition": "将指定卡牌表面朝上移动至游戏外的规则动作。",
+      "plain_explanation": "把牌正面朝上放到游戏外。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 33,
+          "rule": "10-18"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "action.seal",
+      "category": "rule_keyword",
+      "recommended_zh": "封印",
+      "ja": "封印する",
+      "aliases": [
+        "压在此牌下"
+      ],
+      "strict_definition": "将所选卡牌移至封印区，并与执行封印的特定卡牌关联的规则动作。",
+      "plain_explanation": "把一张牌压在指定牌下，暂时停用其效果。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 31,
+          "rule": "10-9"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "action.exchange",
+      "category": "rule_keyword",
+      "recommended_zh": "交换",
+      "ja": "交換",
+      "aliases": [],
+      "strict_definition": "依 10-25 在交换来源与交换目标的区域之间移动两张卡牌的处理。",
+      "plain_explanation": "让两张指定牌互换位置。",
+      "anchors": [
+        {
+          "part": "core",
+          "pdf_page": 35,
+          "rule": "10-25"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "old-cr-translation-2022",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.01",
+      "category": "goddess",
+      "recommended_zh": "摇波",
+      "ja": "ユリナ",
+      "aliases": [
+        "YURINA",
+        "遥波"
+      ],
+      "strict_definition": "附则一女神列表中编号为 01 的可选女神。",
+      "plain_explanation": "女神 ユリナ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.02",
+      "category": "goddess",
+      "recommended_zh": "细音",
+      "ja": "サイネ",
+      "aliases": [
+        "SAINE"
+      ],
+      "strict_definition": "附则一女神列表中编号为 02 的可选女神。",
+      "plain_explanation": "女神 サイネ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.03",
+      "category": "goddess",
+      "recommended_zh": "绯弥香",
+      "ja": "ヒミカ",
+      "aliases": [
+        "HIMIKA"
+      ],
+      "strict_definition": "附则一女神列表中编号为 03 的可选女神。",
+      "plain_explanation": "女神 ヒミカ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.04",
+      "category": "goddess",
+      "recommended_zh": "常世",
+      "ja": "トコヨ",
+      "aliases": [
+        "TOKOYO"
+      ],
+      "strict_definition": "附则一女神列表中编号为 04 的可选女神。",
+      "plain_explanation": "女神 トコヨ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.05",
+      "category": "goddess",
+      "recommended_zh": "胧",
+      "ja": "オボロ",
+      "aliases": [
+        "OBORO",
+        "朧"
+      ],
+      "strict_definition": "附则一女神列表中编号为 05 的可选女神。",
+      "plain_explanation": "女神 オボロ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.06",
+      "category": "goddess",
+      "recommended_zh": "雪灯",
+      "ja": "ユキヒ",
+      "aliases": [
+        "YUKIHI"
+      ],
+      "strict_definition": "附则一女神列表中编号为 06 的可选女神。",
+      "plain_explanation": "女神 ユキヒ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.07",
+      "category": "goddess",
+      "recommended_zh": "森罗",
+      "ja": "シンラ",
+      "aliases": [
+        "SHINRA"
+      ],
+      "strict_definition": "附则一女神列表中编号为 07 的可选女神。",
+      "plain_explanation": "女神 シンラ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.08",
+      "category": "goddess",
+      "recommended_zh": "破钟",
+      "ja": "ハガネ",
+      "aliases": [
+        "HAGANE"
+      ],
+      "strict_definition": "附则一女神列表中编号为 08 的可选女神。",
+      "plain_explanation": "女神 ハガネ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.09",
+      "category": "goddess",
+      "recommended_zh": "千影",
+      "ja": "チカゲ",
+      "aliases": [
+        "CHIKAGE"
+      ],
+      "strict_definition": "附则一女神列表中编号为 09 的可选女神。",
+      "plain_explanation": "女神 チカゲ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.10",
+      "category": "goddess",
+      "recommended_zh": "枢",
+      "ja": "クルル",
+      "aliases": [
+        "KURURU"
+      ],
+      "strict_definition": "附则一女神列表中编号为 10 的可选女神。",
+      "plain_explanation": "女神 クルル 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.11",
+      "category": "goddess",
+      "recommended_zh": "萨莉娅",
+      "ja": "サリヤ",
+      "aliases": [
+        "THALLYA",
+        "莎莉娅"
+      ],
+      "strict_definition": "附则一女神列表中编号为 11 的可选女神。",
+      "plain_explanation": "女神 サリヤ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.12",
+      "category": "goddess",
+      "recommended_zh": "雷螺",
+      "ja": "ライラ",
+      "aliases": [
+        "RAIRA"
+      ],
+      "strict_definition": "附则一女神列表中编号为 12 的可选女神。",
+      "plain_explanation": "女神 ライラ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.13",
+      "category": "goddess",
+      "recommended_zh": "虚路",
+      "ja": "ウツロ",
+      "aliases": [
+        "UTSURO"
+      ],
+      "strict_definition": "附则一女神列表中编号为 13 的可选女神。",
+      "plain_explanation": "女神 ウツロ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.14",
+      "category": "goddess",
+      "recommended_zh": "仄佳",
+      "ja": "ホノカ",
+      "aliases": [
+        "HONOKA"
+      ],
+      "strict_definition": "附则一女神列表中编号为 14 的可选女神。",
+      "plain_explanation": "女神 ホノカ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.15",
+      "category": "goddess",
+      "recommended_zh": "凝努",
+      "ja": "コルヌ",
+      "aliases": [
+        "KORUNU",
+        "科尔努"
+      ],
+      "strict_definition": "附则一女神列表中编号为 15 的可选女神。",
+      "plain_explanation": "女神 コルヌ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.16",
+      "category": "goddess",
+      "recommended_zh": "八叶",
+      "ja": "ヤツハ",
+      "aliases": [
+        "YATSUHA"
+      ],
+      "strict_definition": "附则一女神列表中编号为 16 的可选女神。",
+      "plain_explanation": "女神 ヤツハ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.17",
+      "category": "goddess",
+      "recommended_zh": "波津",
+      "ja": "ハツミ",
+      "aliases": [
+        "HATSUMI",
+        "初海"
+      ],
+      "strict_definition": "附则一女神列表中编号为 17 的可选女神。",
+      "plain_explanation": "女神 ハツミ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.18",
+      "category": "goddess",
+      "recommended_zh": "水津城",
+      "ja": "ミズキ",
+      "aliases": [
+        "MIZUKI"
+      ],
+      "strict_definition": "附则一女神列表中编号为 18 的可选女神。",
+      "plain_explanation": "女神 ミズキ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "goddess.19",
+      "category": "goddess",
+      "recommended_zh": "希",
+      "ja": "メグミ",
+      "aliases": [
+        "MEGUMI",
+        "惠",
+        "梅古美"
+      ],
+      "strict_definition": "附则一女神列表中编号为 19 的可选女神。",
+      "plain_explanation": "女神 メグミ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "仅检出单一社区体系明确使用“希”。"
+    },
+    {
+      "id": "goddess.20",
+      "category": "goddess",
+      "recommended_zh": "叶慧",
+      "ja": "カナヱ",
+      "aliases": [
+        "KANAE",
+        "KANAWE",
+        "奏",
+        "卡娜艾"
+      ],
+      "strict_definition": "附则一女神列表中编号为 20 的可选女神。",
+      "plain_explanation": "女神 カナヱ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "社区使用“叶慧”，但缺少第二独立来源交叉确认。"
+    },
+    {
+      "id": "goddess.21",
+      "category": "goddess",
+      "recommended_zh": "卡姆伊",
+      "ja": "カムヰ",
+      "aliases": [
+        "KAMUWI",
+        "卡姆依"
+      ],
+      "strict_definition": "附则一女神列表中编号为 21 的可选女神。",
+      "plain_explanation": "女神 カムヰ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "无充分简中来源，当前采用音译。"
+    },
+    {
+      "id": "goddess.22",
+      "category": "goddess",
+      "recommended_zh": "恋离",
+      "ja": "レンリ",
+      "aliases": [
+        "RENRI",
+        "莲理"
+      ],
+      "strict_definition": "附则一女神列表中编号为 22 的可选女神。",
+      "plain_explanation": "女神 レンリ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "社区使用“恋离”，但缺少第二独立来源交叉确认。"
+    },
+    {
+      "id": "goddess.23",
+      "category": "goddess",
+      "recommended_zh": "安岐那",
+      "ja": "アキナ",
+      "aliases": [
+        "AKINA",
+        "秋奈",
+        "阿琪娜"
+      ],
+      "strict_definition": "附则一女神列表中编号为 23 的可选女神。",
+      "plain_explanation": "女神 アキナ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "社区攻略检出“安岐那”，仍需确认是否沿用。"
+    },
+    {
+      "id": "goddess.24",
+      "category": "goddess",
+      "recommended_zh": "西斯伊",
+      "ja": "シスイ",
+      "aliases": [
+        "SHISUI",
+        "锯子",
+        "志水",
+        "紫水"
+      ],
+      "strict_definition": "附则一女神列表中编号为 24 的可选女神。",
+      "plain_explanation": "女神 シスイ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "无充分简中来源；当前为音译，社区俗称“锯子”不可进入规范正文。"
+    },
+    {
+      "id": "goddess.25",
+      "category": "goddess",
+      "recommended_zh": "御空",
+      "ja": "ミソラ",
+      "aliases": [
+        "MISORA",
+        "美空"
+      ],
+      "strict_definition": "附则一女神列表中编号为 25 的可选女神。",
+      "plain_explanation": "女神 ミソラ 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "社区使用“御空”，但缺少第二独立来源交叉确认。"
+    },
+    {
+      "id": "goddess.26",
+      "category": "goddess",
+      "recommended_zh": "伊尼尔",
+      "ja": "イニル",
+      "aliases": [
+        "INNEALRA",
+        "因尼尔",
+        "依尼尔"
+      ],
+      "strict_definition": "附则一女神列表中编号为 26 的可选女神。",
+      "plain_explanation": "女神 イニル 的当前推荐简中名。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "第十季新女神缺少可复核简中来源，当前采用音译。"
+    },
+    {
+      "id": "goddess.nonselectable.kodama",
+      "category": "goddess",
+      "recommended_zh": "科达玛",
+      "ja": "コダマ",
+      "aliases": [
+        "KODAMA",
+        "木灵"
+      ],
+      "strict_definition": "附则一列出的不可在双掌缭乱中选择、但可作为卡牌使用者出现的女神。",
+      "plain_explanation": "规则里会出现，但不能直接选择的女神 コダマ。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "low",
+      "conflict_note": "缺少可复核简中来源，当前采用音译；不应在确认前固化。"
+    },
+    {
+      "id": "goddess.nonselectable.kiriko",
+      "category": "goddess",
+      "recommended_zh": "桐子",
+      "ja": "キリコ",
+      "aliases": [
+        "KIRIKO"
+      ],
+      "strict_definition": "附则一列出的不可在双掌缭乱中选择、但可作为卡牌使用者出现的女神。",
+      "plain_explanation": "规则里会出现，但不能直接选择的女神 キリコ。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "low",
+      "conflict_note": "缺少可复核简中来源，当前采用音译；不应在确认前固化。"
+    },
+    {
+      "id": "goddess.nonselectable.zanka",
+      "category": "goddess",
+      "recommended_zh": "赞卡",
+      "ja": "ザンカ",
+      "aliases": [
+        "ZANKA",
+        "斩华"
+      ],
+      "strict_definition": "附则一列出的不可在双掌缭乱中选择、但可作为卡牌使用者出现的女神。",
+      "plain_explanation": "规则里会出现，但不能直接选择的女神 ザンカ。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "low",
+      "conflict_note": "缺少可复核简中来源，当前采用音译；不应在确认前固化。"
+    },
+    {
+      "id": "goddess.nonselectable.wouka",
+      "category": "goddess",
+      "recommended_zh": "沃卡",
+      "ja": "ヲウカ",
+      "aliases": [
+        "WOUKA",
+        "樱华"
+      ],
+      "strict_definition": "附则一列出的不可在双掌缭乱中选择、但可作为卡牌使用者出现的女神。",
+      "plain_explanation": "规则里会出现，但不能直接选择的女神 ヲウカ。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "low",
+      "conflict_note": "缺少可复核简中来源，当前采用音译；不应在确认前固化。"
+    },
+    {
+      "id": "mechanic.yurina.resolve",
+      "category": "goddess_mechanism",
+      "recommended_zh": "决死",
+      "ja": "決死",
+      "aliases": [
+        "残血"
+      ],
+      "strict_definition": "自己的命中樱花结晶不多于 3 时成立的条件。",
+      "plain_explanation": "低血量时强化摇波的部分牌。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.saine.eight-form",
+      "category": "goddess_mechanism",
+      "recommended_zh": "八相",
+      "ja": "八相",
+      "aliases": [],
+      "strict_definition": "自己的装中没有樱花结晶时成立的条件。",
+      "plain_explanation": "空装时强化细音的部分牌。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.himika.rapid-fire",
+      "category": "goddess_mechanism",
+      "recommended_zh": "连火",
+      "ja": "連火",
+      "aliases": [],
+      "strict_definition": "同一回合已使用至少两张牌时成立的条件。",
+      "plain_explanation": "一回合连打多张牌后强化绯弥香。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.tokoyo.poise",
+      "category": "goddess_mechanism",
+      "recommended_zh": "境地",
+      "ja": "境地",
+      "aliases": [],
+      "strict_definition": "自己的集中力等于 2 时成立的条件。",
+      "plain_explanation": "满集中时强化常世的部分牌。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.oboro.install",
+      "category": "goddess_mechanism",
+      "recommended_zh": "设置",
+      "ja": "設置",
+      "aliases": [
+        "设伏"
+      ],
+      "strict_definition": "牌面关键字，由牌库重铸前的规则效果允许从盖牌区使用一张带设置的牌。",
+      "plain_explanation": "洗牌前可从盖牌区发动一张伏击牌。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 39,
+          "rule": "3-2 至 3-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.oboro.digital-install",
+      "category": "goddess_mechanism",
+      "recommended_zh": "数码设置",
+      "ja": "デジ設置",
+      "aliases": [
+        "数设",
+        "电子设置"
+      ],
+      "strict_definition": "『消失』胧的部件关键字，供其替代牌库重铸的规则效果参照。",
+      "plain_explanation": "电子部件组好后触发的特殊设置。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 41,
+          "rule": "3-6"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": "“デジ”译为“数码”还是“电子”缺少社区共识。"
+    },
+    {
+      "id": "mechanic.oboro.cyberwar-zone",
+      "category": "goddess_mechanism",
+      "recommended_zh": "电子战区",
+      "ja": "電子戦ゾーン",
+      "aliases": [
+        "电子战区域"
+      ],
+      "strict_definition": "与『消失』胧玩家关联、仅容纳部件的专属区域。",
+      "plain_explanation": "胧放置并组装主部件和定制部件的区域。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 41,
+          "rule": "3-9"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.yukihi.umbrella",
+      "category": "goddess_mechanism",
+      "recommended_zh": "伞面开合",
+      "ja": "傘の開閉",
+      "aliases": [
+        "开闭伞",
+        "变貌"
+      ],
+      "strict_definition": "在开伞与闭伞两个公开状态之间切换，并据状态读取卡牌相应信息。",
+      "plain_explanation": "切换伞面，让同一张牌改用另一侧数据。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 41,
+          "rule": "4-1 至 4-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.shinra.scheme",
+      "category": "goddess_mechanism",
+      "recommended_zh": "计略",
+      "ja": "計略",
+      "aliases": [
+        "神算",
+        "鬼谋"
+      ],
+      "strict_definition": "森罗玩家秘密持有神算或鬼谋状态，执行后准备下一计略。",
+      "plain_explanation": "在两种秘密策略间轮换并触发不同效果。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 42,
+          "rule": "5-1 至 5-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.hagane.centrifugality",
+      "category": "goddess_mechanism",
+      "recommended_zh": "远心",
+      "ja": "遠心",
+      "aliases": [],
+      "strict_definition": "仅在当前距离较回合开始时远至少 2 且本回合未进行攻击时允许使用的关键字。",
+      "plain_explanation": "本回合先把距离拉远、还没攻击，才能打远心牌。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 43,
+          "rule": "6-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.chikage.poison",
+      "category": "goddess_mechanism",
+      "recommended_zh": "毒",
+      "ja": "毒",
+      "aliases": [
+        "毒牌",
+        "毒袋"
+      ],
+      "strict_definition": "无使用者信息、由千影追加规则加入并可进入对手牌库等区域的专属卡牌分类。",
+      "plain_explanation": "塞进对手循环里妨碍其行动的毒牌。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 43,
+          "rule": "7-1 至 7-5"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.kururu.contraption",
+      "category": "goddess_mechanism",
+      "recommended_zh": "机巧",
+      "ja": "機巧",
+      "aliases": [],
+      "strict_definition": "以牌面机巧图标检查弃牌区、盖牌区等公开信息，满足组合后才可使用的条件。",
+      "plain_explanation": "凑齐指定类型图标才能开动枢的机关牌。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 45,
+          "rule": "8-2 至 8-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.thallya.artificial-flower",
+      "category": "goddess_mechanism",
+      "recommended_zh": "造花结晶",
+      "ja": "造花結晶",
+      "aliases": [
+        "造花"
+      ],
+      "strict_definition": "萨莉娅专属、在机器区域内具有燃烧状态的结晶对象。",
+      "plain_explanation": "车辆引擎里的五颗燃料结晶。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 46,
+          "rule": "9-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.thallya.transform",
+      "category": "goddess_mechanism",
+      "recommended_zh": "变形",
+      "ja": "TransForm",
+      "aliases": [
+        "TRANSFORM",
+        "形态转换"
+      ],
+      "strict_definition": "萨莉娅专属 TransForm 牌及相应机器状态变更。",
+      "plain_explanation": "用专用牌改变车辆形态和能力。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 46,
+          "rule": "9-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": "PDF 第 47 页存在 TransFrom／TransForm 源文拼写不一致，数据保留原异常记录。"
+    },
+    {
+      "id": "mechanic.thallya.combustion",
+      "category": "goddess_mechanism",
+      "recommended_zh": "燃烧",
+      "ja": "燃焼",
+      "aliases": [],
+      "strict_definition": "将未燃烧的造花结晶变为燃烧状态的规则动作。",
+      "plain_explanation": "消耗一颗引擎燃料。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 48,
+          "rule": "9-8"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.thallya.ride",
+      "category": "goddess_mechanism",
+      "recommended_zh": "骑动",
+      "ja": "騎動",
+      "aliases": [],
+      "strict_definition": "依萨莉娅追加规则进行移动并改变造花结晶状态的关键字处理。",
+      "plain_explanation": "开车移动距离并联动燃料。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 48,
+          "rule": "9-9"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.raira.wind-thunder",
+      "category": "goddess_mechanism",
+      "recommended_zh": "风雷",
+      "ja": "風雷",
+      "aliases": [
+        "风雷槽"
+      ],
+      "strict_definition": "雷螺玩家持有风神槽与雷神槽并通过带电牌增加其数值的机制。",
+      "plain_explanation": "为风、雷两个槽蓄力。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 49,
+          "rule": "10-2 至 10-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.raira.charged",
+      "category": "goddess_mechanism",
+      "recommended_zh": "带电",
+      "ja": "帯電",
+      "aliases": [
+        "充电"
+      ],
+      "strict_definition": "雷螺规则为其他女神的牌记录、可被解除以增加风神槽或雷神槽的状态。",
+      "plain_explanation": "其他女神的牌打出后带电，横置解除来加槽。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 49,
+          "rule": "10-3 至 10-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.raira.storm-force",
+      "category": "goddess_mechanism",
+      "recommended_zh": "岚之力",
+      "ja": "嵐の力",
+      "aliases": [
+        "风雷表"
+      ],
+      "strict_definition": "支付风神槽或雷神槽数值并按表执行对应效果。",
+      "plain_explanation": "花槽点数换移动、抽牌或攻击等奖励。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 50,
+          "rule": "10-5"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.utsuro.dust",
+      "category": "goddess_mechanism",
+      "recommended_zh": "灰尘",
+      "ja": "塵",
+      "aliases": [
+        "尘",
+        "灰塵"
+      ],
+      "strict_definition": "虚中樱花结晶达到牌面指定阈值时，使虚路部分牌满足的强化条件。",
+      "plain_explanation": "公共虚很多时，虚路的部分牌会强化。",
+      "anchors": [
+        {
+          "part": "appendix-1",
+          "pdf_page": 75,
+          "rule": "附则1 女神列表（关联锚点）"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": "综合规则只在附则列出虚路，未定义该牌面词；现有简中定义来自单一社区体系，需保留证据缺口。"
+    },
+    {
+      "id": "mechanic.utsuro.revival",
+      "category": "goddess_mechanism",
+      "recommended_zh": "终焉之影复苏",
+      "ja": "終焉の影が蘇る",
+      "aliases": [
+        "终焉复苏"
+      ],
+      "strict_definition": "满足追加规则条件后交换虚路相关追加牌并改变其可用牌的处理。",
+      "plain_explanation": "虚路终章形态触发的专属转变。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 51,
+          "rule": "11-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": "推荐名为直译，尚无简中共识。"
+    },
+    {
+      "id": "mechanic.honoka.bloom",
+      "category": "goddess_mechanism",
+      "recommended_zh": "开花",
+      "ja": "開花",
+      "aliases": [],
+      "strict_definition": "仄佳的部分牌使用后可与追加牌中的指定牌交换的机制。",
+      "plain_explanation": "打出一张牌后让它成长为下一张牌。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 51,
+          "rule": "12-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.korunu.freeze",
+      "category": "goddess_mechanism",
+      "recommended_zh": "冻结",
+      "ja": "凍結",
+      "aliases": [],
+      "strict_definition": "在对手装的空位放置冻结标记，并改变其聚气处理的机制。",
+      "plain_explanation": "占住对手装的容量，对方要先解冻才能正常聚气。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 52,
+          "rule": "13-2 至 13-6"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.yatsuha.reflection",
+      "category": "goddess_mechanism",
+      "recommended_zh": "镜映",
+      "ja": "鏡映",
+      "aliases": [],
+      "strict_definition": "比较双方对应的装、气、命区域，计算结晶数相同的区域数量。",
+      "plain_explanation": "数一数双方有多少对对应资源区的结晶数量相同。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 53,
+          "rule": "14-2-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.yatsuha.perfect-form",
+      "category": "goddess_mechanism",
+      "recommended_zh": "完全态",
+      "ja": "完全態",
+      "aliases": [],
+      "strict_definition": "满足追加规则条件后使用八叶完全态追加牌组的状态与处理。",
+      "plain_explanation": "八叶进入另一套牌面的强化形态。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 53,
+          "rule": "14-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.yatsuha.memory",
+      "category": "goddess_mechanism",
+      "recommended_zh": "回忆区",
+      "ja": "思い出",
+      "aliases": [
+        "思念区"
+      ],
+      "strict_definition": "与八叶相关、容纳特定追加牌的专属区域＜思い出＞。",
+      "plain_explanation": "八叶旅途机制保存牌的位置。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 53,
+          "rule": "14-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": "“思い出”可译“回忆”或“回忆区”，缺少简中共识。"
+    },
+    {
+      "id": "mechanic.hatsumi.wind",
+      "category": "goddess_mechanism",
+      "recommended_zh": "顺风／逆风",
+      "ja": "順風・逆風",
+      "aliases": [
+        "顺逆风"
+      ],
+      "strict_definition": "依据对手上一回合是否进行攻击决定的波津公开状态。",
+      "plain_explanation": "对手上回合没攻击就是顺风，否则是逆风。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 55,
+          "rule": "15-1-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.hatsumi.dive",
+      "category": "goddess_mechanism",
+      "recommended_zh": "潜水",
+      "ja": "潜水",
+      "aliases": [],
+      "strict_definition": "波津牌面指示并依 15-2 解决的专属处理。",
+      "plain_explanation": "按波津规则暂避并在之后处理的动作。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 55,
+          "rule": "15-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.mizuki.barracks",
+      "category": "goddess_mechanism",
+      "recommended_zh": "兵舍",
+      "ja": "兵舎",
+      "aliases": [
+        "兵营"
+      ],
+      "strict_definition": "与水津城玩家关联、容纳无使用者信息的兵员牌的专属区域。",
+      "plain_explanation": "存放盾兵、枪兵和骑兵的区域。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 56,
+          "rule": "16-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.mizuki.recruit",
+      "category": "goddess_mechanism",
+      "recommended_zh": "征兵",
+      "ja": "徴兵",
+      "aliases": [],
+      "strict_definition": "从兵舍选择一张未征兵的兵员牌，并将其改为已征兵状态的规则动作。",
+      "plain_explanation": "把兵舍里一张尚未征用的兵员准备好。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 57,
+          "rule": "16-5"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-goddess-pages-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.megumi.seed-crystal",
+      "category": "goddess_mechanism",
+      "recommended_zh": "种结晶",
+      "ja": "種結晶",
+      "aliases": [
+        "种子结晶"
+      ],
+      "strict_definition": "希的专属结晶对象，在土壤、付与牌等位置间移动并可代替樱花结晶。",
+      "plain_explanation": "用来培养付与牌的种子资源。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 57,
+          "rule": "17-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.megumi.soil",
+      "category": "goddess_mechanism",
+      "recommended_zh": "土壤",
+      "ja": "土壌",
+      "aliases": [
+        "土壤区"
+      ],
+      "strict_definition": "与希玩家关联、放置种结晶的专属区域。",
+      "plain_explanation": "未萌发的种子待的地方。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 57,
+          "rule": "17-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.megumi.growth",
+      "category": "goddess_mechanism",
+      "recommended_zh": "生长",
+      "ja": "生育",
+      "aliases": [
+        "生育",
+        "成长"
+      ],
+      "strict_definition": "牌可持有的数值信息，本身不产生效果；使用付与牌时，17-7-1 依其 X 值限制可从土壤选择的已萌芽种结晶数量。",
+      "plain_explanation": "展开付与牌时，最多可再放入 X 颗已萌芽种子。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 58,
+          "rule": "17-6 至 17-7-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "社区同时使用“生长”和“生育”；日文术语为“生育”，推荐“生长”更符合简中游戏语感。"
+    },
+    {
+      "id": "mechanic.kanawe.conception",
+      "category": "goddess_mechanism",
+      "recommended_zh": "构想",
+      "ja": "構想",
+      "aliases": [
+        "剧本"
+      ],
+      "strict_definition": "叶慧专属构想牌、构想区、达成区和幕数共同构成的任务推进机制。",
+      "plain_explanation": "准备小剧本，完成条件后推进幕数。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 59,
+          "rule": "18-1 至 18-7"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "fandom-faq-zh",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.kanawe.act",
+      "category": "goddess_mechanism",
+      "recommended_zh": "幕",
+      "ja": "幕",
+      "aliases": [
+        "幕数",
+        "当前幕"
+      ],
+      "strict_definition": "规则记录的“当前幕颜色”和“当前幕数值”两项公开信息；颜色可带有效果，数值用于表示构想进度。",
+      "plain_explanation": "记录当前剧本演到哪一幕，以及这一幕的颜色效果。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 60,
+          "rule": "18-3-1 至 18-3-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.kamuwi.oath",
+      "category": "goddess_mechanism",
+      "recommended_zh": "誓约",
+      "ja": "誓約",
+      "aliases": [],
+      "strict_definition": "卡姆伊部分牌持有、依据禁忌值和追加规则约束使用的关键字。",
+      "plain_explanation": "使用强力牌时要遵守的禁忌条件。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 62,
+          "rule": "19-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.kamuwi.taboo",
+      "category": "goddess_mechanism",
+      "recommended_zh": "禁忌",
+      "ja": "禁忌",
+      "aliases": [
+        "禁忌值"
+      ],
+      "strict_definition": "卡姆伊玩家持有的公开数值；达到规则界限会触发败北相关处理。",
+      "plain_explanation": "力量越用越危险，数值过高会输。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 62,
+          "rule": "19-2 至 19-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.renri.perjury",
+      "category": "goddess_mechanism",
+      "recommended_zh": "伪证",
+      "ja": "偽証",
+      "aliases": [
+        "伪装"
+      ],
+      "strict_definition": "恋离将满足条件的手牌作为另一张牌使用并在之后接受反证检查的机制。",
+      "plain_explanation": "把手里的牌冒充成另一张牌来打。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 63,
+          "rule": "20-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.renri.perjury-install",
+      "category": "goddess_mechanism",
+      "recommended_zh": "伪证设置",
+      "ja": "偽証設置",
+      "aliases": [
+        "伪设置"
+      ],
+      "strict_definition": "以伪证方式从盖牌区使用带设置关键字之牌的专属处理。",
+      "plain_explanation": "从盖牌区冒充并发动一张设置牌。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 63,
+          "rule": "20-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.renri.regression",
+      "category": "goddess_mechanism",
+      "recommended_zh": "回归",
+      "ja": "回帰",
+      "aliases": [],
+      "strict_definition": "依 20-5 将指定对象或状态恢复到规则所述位置的恋离专属处理。",
+      "plain_explanation": "让恋离的相关牌回到可再次利用的位置。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 64,
+          "rule": "20-5"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.renri.disproof",
+      "category": "goddess_mechanism",
+      "recommended_zh": "反证",
+      "ja": "反証",
+      "aliases": [],
+      "strict_definition": "对伪证宣言进行验证并依真假执行后果的规则处理。",
+      "plain_explanation": "检查恋离刚才是不是在说谎。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 65,
+          "rule": "20-6-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.akina.flow",
+      "category": "goddess_mechanism",
+      "recommended_zh": "资金流",
+      "ja": "フロー",
+      "aliases": [
+        "流",
+        "FLOW"
+      ],
+      "strict_definition": "与安岐那玩家关联、用于记录资本移动的专属区域＜フロー＞。",
+      "plain_explanation": "经济机制中资金流转的区域。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 65,
+          "rule": "21-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "“フロー”社区常简称“流”，规范名尚待确认。"
+    },
+    {
+      "id": "mechanic.akina.capital",
+      "category": "goddess_mechanism",
+      "recommended_zh": "资本",
+      "ja": "資本",
+      "aliases": [],
+      "strict_definition": "安岐那玩家持有、由规则依相场与结晶位置计算的公开数值。",
+      "plain_explanation": "决定投资和回收收益的资金量。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 66,
+          "rule": "21-2-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.akina.investment",
+      "category": "goddess_mechanism",
+      "recommended_zh": "投资券",
+      "ja": "投資券",
+      "aliases": [],
+      "strict_definition": "安岐那卡牌持有、改变费用与资本处理的专属信息。",
+      "plain_explanation": "把一张牌当作投资项目来积累收益。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 66,
+          "rule": "21-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.akina.recovery",
+      "category": "goddess_mechanism",
+      "recommended_zh": "回收",
+      "ja": "回収",
+      "aliases": [],
+      "strict_definition": "安岐那依规则从投资状态取回资源或卡牌的专属处理。",
+      "plain_explanation": "把投资的资本和收益收回来。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 66,
+          "rule": "21-5 至 21-6"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.akina.market",
+      "category": "goddess_mechanism",
+      "recommended_zh": "相场",
+      "ja": "相場",
+      "aliases": [
+        "行情"
+      ],
+      "strict_definition": "安岐那玩家持有的 1 至 4 的公开整数，开局为 2；不同数值对应不同区域，并按追加规则升降。",
+      "plain_explanation": "当前市场行情，决定投资等效果参照哪个区域。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 65,
+          "rule": "21-2-1"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.shisui.laceration",
+      "category": "goddess_mechanism",
+      "recommended_zh": "裂伤",
+      "ja": "裂傷",
+      "aliases": [
+        "裂",
+        "锯伤"
+      ],
+      "strict_definition": "以裂伤标记占据装、命或气的容量，并可转化为相应伤害的机制。",
+      "plain_explanation": "在资源区留下伤口，之后变成伤害。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 67,
+          "rule": "22-1 至 22-11"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.misora.aim",
+      "category": "goddess_mechanism",
+      "recommended_zh": "瞄准",
+      "ja": "照準",
+      "aliases": [
+        "准星"
+      ],
+      "strict_definition": "御空玩家持有、取“无”或整数值的公开信息，用于判断攻击是否瞄准吻合。",
+      "plain_explanation": "把准星记录在某个距离上，之后用来检查攻击。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 70,
+          "rule": "23-1-1 至 23-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-community-guides",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.misora.on-target",
+      "category": "goddess_mechanism",
+      "recommended_zh": "瞄准吻合",
+      "ja": "照準が合っている",
+      "aliases": [
+        "对准",
+        "瞄准成功"
+      ],
+      "strict_definition": "攻击的适正距离与当前瞄准值满足 23-3 条件的状态。",
+      "plain_explanation": "攻击距离覆盖准星时，相关效果成立。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 71,
+          "rule": "23-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": "“照準が合っている”尚无稳定简中术语，当前采用说明式译名。"
+    },
+    {
+      "id": "mechanic.misora.tracking",
+      "category": "goddess_mechanism",
+      "recommended_zh": "追尾",
+      "ja": "追尾",
+      "aliases": [],
+      "strict_definition": "按 23-4 改变御空瞄准值并修正攻击的关键字处理。",
+      "plain_explanation": "让准星追着目标距离移动。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 71,
+          "rule": "23-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.innealra.fate-card",
+      "category": "goddess_mechanism",
+      "recommended_zh": "命运牌",
+      "ja": "運命カード",
+      "aliases": [
+        "命运卡"
+      ],
+      "strict_definition": "伊尼尔专属、具有名字、编号、命运值和箭头等信息的卡牌对象。",
+      "plain_explanation": "决定伊尼尔路线和变化的专用牌。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 71,
+          "rule": "24-1 至 24-2"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.innealra.fate-zone",
+      "category": "goddess_mechanism",
+      "recommended_zh": "命运区",
+      "ja": "運命",
+      "aliases": [],
+      "strict_definition": "与伊尼尔玩家关联、放置命运牌的专属区域＜運命＞。",
+      "plain_explanation": "当前命运牌所在的区域。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 72,
+          "rule": "24-3"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "medium",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": ""
+    },
+    {
+      "id": "mechanic.innealra.lost",
+      "category": "goddess_mechanism",
+      "recommended_zh": "迷失区",
+      "ja": "ロスト",
+      "aliases": [
+        "LOST",
+        "失落区"
+      ],
+      "strict_definition": "与伊尼尔玩家关联、放置失去的命运牌等对象的专属区域＜ロスト＞。",
+      "plain_explanation": "离开当前命运路线的牌所去的区域。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 72,
+          "rule": "24-4"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "low",
+      "review_status": "locked",
+      "impact": "medium",
+      "conflict_note": "“ロスト”可译“迷失／失落”或保留英文，尚无简中证据。"
+    },
+    {
+      "id": "mechanic.innealra.resonate",
+      "category": "goddess_mechanism",
+      "recommended_zh": "共鸣",
+      "ja": "共鳴",
+      "aliases": [],
+      "strict_definition": "满足 24-6 条件时依命运牌信息执行相应处理的伊尼尔机制。",
+      "plain_explanation": "命运牌条件对上后触发额外效果。",
+      "anchors": [
+        {
+          "part": "additional",
+          "pdf_page": 73,
+          "rule": "24-6"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "pdf-1.14.1",
+          "role": "推荐名、别名或用法证据"
+        },
+        {
+          "source_id": "bilibili-keywords-2024",
+          "role": "推荐名、别名或用法证据"
+        }
+      ],
+      "confidence": "high",
+      "review_status": "locked",
+      "impact": "high",
+      "conflict_note": ""
+    }
+  ]
+}

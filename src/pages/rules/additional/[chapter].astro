@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import OnPageToc from "../../../components/OnPageToc.astro";
+import RuleArticle from "../../../components/RuleArticle.astro";
+import { loadSiteContent } from "../../../lib/content-model";
+import { renderRuleMarkdown } from "../../../lib/rule-renderer";
+import { additionalChapterGoddess } from "../../../lib/search-normalization";
+
+export function getStaticPaths() {
+  return loadSiteContent().additionalChapters.map((chapter) => ({ params: { chapter: chapter.numberPadded } }));
+}
+
+const content = loadSiteContent();
+const chapter = content.additionalChapters.find((entry) => entry.numberPadded === Astro.params.chapter)!;
+const index = content.additionalChapters.indexOf(chapter);
+const base = import.meta.env.BASE_URL;
+const html = renderRuleMarkdown(chapter.markdown, { base, part: "additional", content });
+const goddess = additionalChapterGoddess(chapter.number, content);
+const previous = index > 0
+  ? { label: `追加规则 ${content.additionalChapters[index - 1].numberPadded}`, route: content.additionalChapters[index - 1].route, title: content.additionalChapters[index - 1].title }
+  : { label: "核心规则 10", route: "/rules/core/10/", title: content.coreChapters.at(-1)!.title };
+const next = index < content.additionalChapters.length - 1
+  ? { label: `追加规则 ${content.additionalChapters[index + 1].numberPadded}`, route: content.additionalChapters[index + 1].route, title: content.additionalChapters[index + 1].title }
+  : { label: "附则 01", route: "/rules/appendix/01/", title: "女神列表" };
+---
+
+<BaseLayout
+  title={`追加规则 ${chapter.numberPadded} ${chapter.title}`}
+  description={`综合规则 1.14.1 追加规则第 ${chapter.number} 章：${chapter.title}。`}
+  kind="规则"
+  {goddess}
+>
+  <RuleArticle eyebrow={`追加规则 ${chapter.numberPadded}`} title={chapter.title} {html} sourcePages={chapter.sourcePages} {base} {previous} {next} />
+  <OnPageToc slot="toc" headings={chapter.ruleHeadings} />
+</BaseLayout>

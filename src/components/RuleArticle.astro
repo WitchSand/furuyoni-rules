@@ -1,0 +1,42 @@
+---
+import { sitePath } from "../lib/site-path";
+
+interface Neighbor {
+  label: string;
+  route: string;
+  title: string;
+}
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  html: string;
+  sourcePages: number[];
+  base: string;
+  previous?: Neighbor;
+  next?: Neighbor;
+}
+
+const { eyebrow, title, html, sourcePages, base, previous, next } = Astro.props;
+const hasPageAnchor = (page: number) => html.includes(`id="source-page-${page}"`);
+---
+
+<article class="rule-article">
+  <header class="article-header">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1 data-pagefind-weight="10">{title}</h1>
+    <p class="source-page-list">
+      <span>底本 PDF 页码</span>
+      {sourcePages.map((page) => hasPageAnchor(page)
+        ? <a href={`#source-page-${page}`} aria-label={`跳到底本 PDF 第 ${page} 页`}>{page}</a>
+        : <span class="page-chip" title="本章从该页中部开始">{page}</span>)}
+    </p>
+  </header>
+  <div class="rule-content" set:html={html}></div>
+  {(previous || next) && (
+    <nav class="article-pagination" aria-label="相邻章节">
+      {previous ? <a rel="prev" href={sitePath(previous.route, base)}><span>上一章</span>{previous.label} {previous.title}</a> : <span></span>}
+      {next ? <a rel="next" href={sitePath(next.route, base)}><span>下一章</span>{next.label} {next.title}</a> : <span></span>}
+    </nav>
+  )}
+</article>

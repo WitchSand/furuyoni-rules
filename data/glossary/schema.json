@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/furuyoni/glossary.schema.json",
+  "title": "散樱乱武术语审核数据",
+  "type": "object",
+  "required": ["schema_version", "source_pdf_sha256", "generated_at", "status_policy", "terms"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "source_pdf_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "generated_at": { "type": "string", "format": "date" },
+    "status_policy": { "type": "object" },
+    "terms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "recommended_zh",
+          "ja",
+          "aliases",
+          "strict_definition",
+          "plain_explanation",
+          "anchors",
+          "evidence",
+          "confidence",
+          "review_status",
+          "impact",
+          "conflict_note"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$" },
+          "category": {
+            "enum": [
+              "project_concept",
+              "region_resource",
+              "card_type",
+              "effect_class",
+              "phase_action",
+              "rule_keyword",
+              "goddess",
+              "goddess_mechanism"
+            ]
+          },
+          "recommended_zh": { "type": "string", "minLength": 1 },
+          "ja": { "type": "string", "minLength": 1 },
+          "aliases": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+          "strict_definition": { "type": "string", "minLength": 1 },
+          "plain_explanation": { "type": "string", "minLength": 1 },
+          "anchors": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["part", "pdf_page", "rule"],
+              "properties": {
+                "part": { "enum": ["core", "additional", "appendix-1", "appendix-2"] },
+                "pdf_page": { "type": "integer", "minimum": 1, "maximum": 86 },
+                "rule": { "type": "string", "minLength": 1 }
+              },
+              "additionalProperties": false
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["source_id", "role"],
+              "properties": {
+                "source_id": { "type": "string", "minLength": 1 },
+                "role": { "type": "string", "minLength": 1 }
+              },
+              "additionalProperties": false
+            }
+          },
+          "confidence": { "enum": ["high", "medium", "low"] },
+          "review_status": { "enum": ["review", "provisional", "locked"] },
+          "impact": { "enum": ["high", "medium", "low"] },
+          "conflict_note": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

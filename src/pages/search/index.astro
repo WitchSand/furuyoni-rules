@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { loadSiteContent } from "../../lib/content-model";
+import { categoryLabels } from "../../lib/routes";
+import { sitePath } from "../../lib/site-path";
+
+const content = loadSiteContent();
+const base = import.meta.env.BASE_URL;
+const categories = [...new Set(content.glossary.map((term) => term.category))]
+  .sort((left, right) => (categoryLabels[left] ?? left).localeCompare(categoryLabels[right] ?? right, "zh-CN"));
+const goddesses = content.glossary
+  .filter((term) => term.category === "goddess")
+  .map((term) => term.recommended_zh);
+---
+
+<BaseLayout title="全文与术语搜索" description="在完整规则与 171 条术语中搜索推荐简中、日文、别名、女神名和卡号。" kind="搜索">
+  <header class="page-header">
+    <p class="eyebrow">Pagefind extended · 纯静态索引</p>
+    <h1>全文与术语搜索</h1>
+    <p>支持推荐简中、日文原词、社区别名、女神名、规则编号与卡号。可按内容类型、术语类别、置信度和女神筛选。</p>
+  </header>
+  <search-app class="search-panel" data-base={base}>
+    <form class="search-form" role="search">
+      <div class="search-query-row">
+        <label class="visually-hidden" for="site-search">搜索规则与术语</label>
+        <input id="site-search" name="q" type="search" autocomplete="off" placeholder="例如：樱花结晶／オーラ／气合／NA-10-kururu-A1-S-3-Ex1" />
+        <button type="submit">搜索</button>
+      </div>
+      <div class="search-filters">
+        <label>内容类型<select data-filter="kind"><option value="">全部</option><option value="规则">规则</option><option value="术语">术语</option></select></label>
+        <label>术语类别<select data-filter="category"><option value="">全部</option>{categories.map((category) => <option value={category}>{categoryLabels[category] ?? category}</option>)}</select></label>
+        <label>置信度<select data-filter="confidence"><option value="">全部</option><option value="high">高</option><option value="medium">中</option><option value="low">低</option></select></label>
+        <label>女神<select data-filter="goddess"><option value="">全部</option>{goddesses.map((goddess) => <option value={goddess}>{goddess}</option>)}</select></label>
+      </div>
+    </form>
+    <p class="search-status" role="status" aria-live="polite">正在准备搜索索引……</p>
+    <ol class="search-results"></ol>
+    <noscript><p class="notice">搜索交互需要 JavaScript。所有规则仍可从<a href={sitePath("/rules/", base)}>完整规则目录</a>阅读，171 条术语仍可从<a href={sitePath("/glossary/", base)}>术语总表</a>逐页访问。</p></noscript>
+  </search-app>
+</BaseLayout>

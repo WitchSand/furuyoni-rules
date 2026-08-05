@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "accessed_at": "2026-08-04",
+  "evidence_policy": {
+    "1": "获原作方认证与监修项目中的简中用语",
+    "2": "受原作方协助运营、但中文明确未经监修的半官方模拟器",
+    "3": "至少两个独立简中社区来源形成的共识",
+    "4": "旧版综合规则民译，仅用于差异核对",
+    "fallback": "无充分简中依据时采用直译或音译，并标为 provisional"
+  },
+  "sources": [
+    {
+      "id": "pdf-1.14.1",
+      "kind": "primary-rules",
+      "evidence_level": 0,
+      "title": "《新幕 桜降る代に決闘を》総合ルール 1.14.1",
+      "url": "https://main-bakafire.ssl-lolipop.jp/furuyoni/sp/na/dl/furuyoni_comprehensive_rule.pdf",
+      "local_path": "furuyoni_comprehensive_rule.pdf",
+      "sha256": "b96c743b343d7522db61af03952db73189283816868b8e8747f289a71801ab98",
+      "accessed_at": "2026-08-04",
+      "accessibility": "accessible",
+      "evidence_summary": "86 页日文综合规则是规则定义、编号、卡号、交叉引用及红绿修订的唯一语义底本。",
+      "limitations": "它不直接决定简中推荐译名；简中用词仍按四级网络证据体系审核。"
+    },
+    {
+      "id": "steam-radiant-duels-zh-hans",
+      "kind": "supervised-zh-project",
+      "evidence_level": 1,
+      "title": "Steam《散樱乱武 ～绚烂竞演～》简体中文商店页",
+      "url": "https://store.steampowered.com/app/3446770?l=schinese",
+      "accessed_at": "2026-08-04",
+      "accessibility": "accessible",
+      "evidence_summary": "项目说明其获得 BakaFire Party 商用许可、认证与监修；页面稳定使用散樱乱武、女神、尊者、双掌缭乱、眼前构筑、樱花决斗、樱花结晶、距离、卡牌和王牌等词。",
+      "limitations": "商店页不是完整规则文本；同页同时出现牌组和卡组，不能据此消除该组冲突。"
+    },
+    {
+      "id": "simulator-zh-hans",
+      "kind": "semi-official-simulator",
+      "evidence_level": 2,
+      "title": "ふるよにコモンズ／网页模拟器简中界面",
+      "url": "https://furuyoni-simulator.herokuapp.com/?lng=zh-hans",
+      "accessed_at": "2026-08-04",
+      "accessibility": "indexed-snapshot-only",
+      "evidence_summary": "网页快照显示版本 1.62.0、支持第十季 26 柱女神，并说明由制作者在 BakaFire 协助下运营。",
+      "limitations": "页面明确声明非日文语言不受监督、不具官方保证；本次直接下载本地化资源超时，未把不可复核的界面字符串写成证据。"
+    },
+    {
+      "id": "bilibili-keywords-2024",
+      "kind": "community-glossary",
+      "evidence_level": 3,
+      "title": "Bilibili《全卡词条说人话版汇总》",
+      "url": "https://www.bilibili.com/opus/927874138977075240",
+      "accessed_at": "2026-08-04",
+      "accessibility": "accessible",
+      "evidence_summary": "覆盖常时、决死、攻击后、破绽、超克、终端、箭头、对应、展开、基本动作、达人距、再起、封印、远心、机巧等大量社区常用词。",
+      "limitations": "作者明确提示部分译名不确定；只作为社区用法证据，不能单独成为权威。"
+    },
+    {
+      "id": "bilibili-community-guides",
+      "kind": "community-guides",
+      "evidence_level": 3,
+      "title": "Bilibili 散樱乱武社区攻略与角色条目",
+      "url": "https://www.bilibili.com/opus/323336163228148802",
+      "related_urls": [
+        "https://www.bilibili.com/read/cv4303972/",
+        "https://www.bilibili.com/video/BV1AA41127JU/",
+        "https://www.bilibili.com/read/cv28747232/"
+      ],
+      "accessed_at": "2026-08-04",
+      "accessibility": "accessible",
+      "evidence_summary": "社区攻略持续使用命、装、气、虚、距、牌组、攻击距离、达人间合、装附、聚气、雪灯、叶慧、希、恋离、御空、安岐那等称呼。",
+      "limitations": "作者与年代不一，含环境简称和俗称；同域内容不计作两个独立来源。"
+    },
+    {
+      "id": "fandom-faq-zh",
+      "kind": "community-faq",
+      "evidence_level": 3,
+      "title": "散樱乱武 Wiki 中文 FAQ",
+      "url": "https://furuyoni.fandom.com/zh/wiki/FAQ",
+      "accessed_at": "2026-08-04",
+      "accessibility": "intermittent-indexed-snapshot",
+      "evidence_summary": "FAQ 使用王牌、弃牌区、主要阶段、攻击、对应、全力、行动、付与、展开时、破弃时、牌库、盖牌区、准备阶段、重铸牌库和焦躁等词。",
+      "limitations": "社区 Wiki 页面直接访问偶发错误；其自述仅为官方 FAQ 翻译和社区内容，不能替代日文规则。"
+    },
+    {
+      "id": "fandom-goddess-pages-zh",
+      "kind": "community-goddess-pages",
+      "evidence_level": 3,
+      "title": "散樱乱武 Wiki 女神页面",
+      "url": "https://furuyoni.fandom.com/zh/wiki/%E5%88%80",
+      "related_urls": [
+        "https://furuyoni.fandom.com/zh/wiki/%E8%96%99%E5%88%80",
+        "https://furuyoni.fandom.com/zh/wiki/%E9%93%B3",
+        "https://furuyoni.fandom.com/zh/wiki/%E6%89%87",
+        "https://furuyoni.fandom.com/zh/wiki/%E5%BF%8D",
+        "https://furuyoni.fandom.com/zh/wiki/%E4%BC%9E",
+        "https://furuyoni.fandom.com/zh/wiki/%E4%B9%A6",
+        "https://furuyoni.fandom.com/zh/wiki/%E9%94%A4",
+        "https://furuyoni.fandom.com/zh/wiki/%E6%AF%92",
+        "https://furuyoni.fandom.com/zh/wiki/%E7%BB%9C%E7%BC%B2",
+        "https://furuyoni.fandom.com/zh/wiki/%E6%96%B0%E5%9E%8B",
+        "https://furuyoni.fandom.com/zh/wiki/%E7%88%AA",
+        "https://furuyoni.fandom.com/zh/wiki/%E9%95%B0",
+        "https://furuyoni.fandom.com/zh/wiki/%E6%97%97",
+        "https://furuyoni.fandom.com/zh/wiki/%E6%A9%87",
+        "https://furuyoni.fandom.com/zh/wiki/%E9%95%9C",
+        "https://furuyoni.fandom.com/zh/wiki/%E6%A3%B9",
+        "https://furuyoni.fandom.com/zh/wiki/%E5%85%9C"
+      ],
+      "accessed_at": "2026-08-04",
+      "accessibility": "accessible-with-gaps",
+      "evidence_summary": "可复核至前 18 柱女神的社区名及决死、八相、连火、境地、设置、变貌、计略、远心、毒袋、机巧、造花、风雷、灰尘、开花、冻结、镜映、航海和统率等机制称呼。",
+      "limitations": "页面覆盖滞后且部分链接失效；只能证明社区用法，未覆盖第 19 至 26 柱全部推荐名。"
+    },
+    {
+      "id": "old-cr-translation-2022",
+      "kind": "legacy-fan-translation",
+      "evidence_level": 4,
+      "title": "旧版《散樱乱武新幕》综合规则民译",
+      "url": "https://read01.com/38jMkO2.html",
+      "accessed_at": "2026-08-04",
+      "accessibility": "accessible",
+      "evidence_summary": "用于核对牌组、区域简称、对象、情报、保有者、状况起因、嵌套结算、适当距离、达人距离、纳等旧译差异。",
+      "limitations": "作者明确说明含机器翻译和个人理解；禁止把单一旧译当作权威。"
+    }
+  ]
+}

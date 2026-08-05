@@ -1,0 +1,52 @@
+{
+  "name": "furuyoni-rules",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "《散樱乱武 新幕》综合规则 1.14.1 非官方简中静态规则站",
+  "license": "SEE LICENSE IN LICENSE",
+  "licenseBoundary": "MIT 仅适用于原创程序代码；规范译文、术语、证据数据及原作相关内容见 NOTICE.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WitchSand/furuyoni-rules.git"
+  },
+  "homepage": "https://witchsand.github.io/furuyoni-rules/",
+  "bugs": {
+    "url": "https://github.com/WitchSand/furuyoni-rules/issues"
+  },
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=9.6.5"
+  },
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "node scripts/build-site.mjs",
+    "build:subpath": "node scripts/build-site.mjs --base /furuyoni-rules/ --out-dir dist-subpath",
+    "build:pages": "node scripts/build-site.mjs --base /furuyoni-rules/ --out-dir dist-pages",
+    "preview": "node scripts/serve-static.mjs --dir dist --port 4321",
+    "preview:subpath": "node scripts/serve-static.mjs --dir dist-subpath --base /furuyoni-rules/ --port 4322",
+    "preview:pages": "node scripts/serve-static.mjs --dir dist-pages --base /furuyoni-rules/ --port 4322",
+    "test:e2e": "playwright test",
+    "audit:dist": "node scripts/audit-static-build.mjs --dir dist --base /",
+    "audit:pages": "node scripts/audit-static-build.mjs --dir dist-pages --base /furuyoni-rules/",
+    "audit:public": "node scripts/audit-public-source.mjs",
+    "verify:public": "node scripts/verify-public.mjs",
+    "smoke:deployment": "node scripts/smoke-deployment.mjs"
+  },
+  "dependencies": {
+    "astro": "7.1.6",
+    "markdown-it": "15.0.0",
+    "pagefind": "1.5.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@axe-core/playwright": "4.12.1",
+    "@playwright/test": "1.62.1",
+    "@types/node": "26.1.2",
+    "typescript": "5.9.3",
+    "vitest": "4.1.10"
+  }
+}

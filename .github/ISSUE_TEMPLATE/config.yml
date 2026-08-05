@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 官方综合规则
+    url: https://main-bakafire.ssl-lolipop.jp/furuyoni/sp/na/dl/furuyoni_comprehensive_rule.pdf
+    about: 请先核对 BakaFire Party 官方日文底本。
+  - name: 私密安全报告
+    url: https://github.com/WitchSand/furuyoni-rules/security/advisories/new
+    about: 涉及安全影响时请勿创建公开 Issue。

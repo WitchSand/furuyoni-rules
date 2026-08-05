@@ -1,0 +1,62 @@
+---
+import type { RuleChapter } from "../lib/content-model";
+import { sitePath } from "../lib/site-path";
+
+interface Props {
+  base: string;
+  currentPath: string;
+  core: RuleChapter[];
+  additional: RuleChapter[];
+}
+
+const { base, currentPath, core, additional } = Astro.props;
+const active = (route: string) => currentPath === sitePath(route, base);
+---
+
+<site-navigation>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" hidden>
+    <span aria-hidden="true">☰</span> 章节导航
+  </button>
+  <nav class="site-nav" id="site-nav-panel" aria-label="规则章节导航">
+    <div class="mobile-nav-heading">
+      <strong>规则章节</strong>
+      <button class="nav-close" type="button" aria-label="关闭章节导航" hidden>×</button>
+    </div>
+    <ul class="nav-primary">
+      <li><a href={sitePath("/rules/front/", base)} aria-current={active("/rules/front/") ? "page" : undefined}>封面与说明</a></li>
+      <li><a href={sitePath("/rules/", base)} aria-current={active("/rules/") ? "page" : undefined}>规则总目录</a></li>
+    </ul>
+    <details open>
+      <summary>核心规则 <span>10 章</span></summary>
+      <ol>
+        {core.map((chapter) => (
+          <li>
+            <a href={sitePath(chapter.route, base)} aria-current={active(chapter.route) ? "page" : undefined}>
+              <span>{chapter.numberPadded}</span>{chapter.title}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </details>
+    <details open>
+      <summary>追加规则 <span>24 章</span></summary>
+      <ol>
+        {additional.map((chapter) => (
+          <li>
+            <a href={sitePath(chapter.route, base)} aria-current={active(chapter.route) ? "page" : undefined}>
+              <span>{chapter.numberPadded}</span>{chapter.title}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </details>
+    <details open>
+      <summary>附则</summary>
+      <ul>
+        <li><a href={sitePath("/rules/appendix/01/", base)} aria-current={active("/rules/appendix/01/") ? "page" : undefined}>01 女神列表</a></li>
+        <li><a href={sitePath("/rules/appendix/02/", base)} aria-current={active("/rules/appendix/02/") ? "page" : undefined}>02 勘误</a></li>
+      </ul>
+    </details>
+  </nav>
+  <button class="nav-backdrop" type="button" aria-label="关闭章节导航" hidden></button>
+</site-navigation>

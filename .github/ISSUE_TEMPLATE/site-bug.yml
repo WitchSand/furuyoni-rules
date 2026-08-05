@@ -1,0 +1,60 @@
+name: 站点缺陷
+description: 报告路由、搜索、交互、响应式或无障碍问题
+title: "[站点缺陷] "
+labels:
+  - site-bug
+body:
+  - type: input
+    id: url
+    attributes:
+      label: 页面 URL
+      placeholder: https://witchsand.github.io/furuyoni-rules/...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 浏览器、版本与设备
+      placeholder: Chrome 140，macOS，视口 320×900
+    validations:
+      required: true
+  - type: dropdown
+    id: javascript
+    attributes:
+      label: JavaScript 状态
+      options:
+        - 已启用
+        - 已禁用
+        - 不确定
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: accessibility
+    attributes:
+      label: 无障碍补充
+      description: 若相关，请说明键盘、焦点、缩放、辅助技术或横向溢出情况。
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: 范围确认
+      options:
+        - label: 我没有在此 Issue 中公开敏感安全细节。
+          required: true
