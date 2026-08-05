@@ -1,0 +1,55 @@
+name: 规则翻译纠错
+description: 报告规范简中与综合规则 1.14.1 底本之间的差异
+title: "[规则纠错] "
+labels:
+  - rule-correction
+body:
+  - type: markdown
+    attributes:
+      value: |
+        日文底本是规则语义的最高权威。请提供可复核证据，不要仅凭社区译名修改规范正文。
+  - type: input
+    id: page
+    attributes:
+      label: PDF 物理页码
+      placeholder: 例如 24
+    validations:
+      required: true
+  - type: input
+    id: rule
+    attributes:
+      label: 规则编号、卡号或表格
+      placeholder: 例如 9-2 或 NA-01-yurina-O-N-1
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 日文原文与证据
+      description: 请给出足够定位的短摘录；不要上传或粘贴整份官方 PDF。
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 当前简中内容
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议修正与影响
+      description: 说明对数值、范围、交叉引用、修订标记或冻结术语的影响。
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: 边界确认
+      options:
+        - label: 我已核对综合规则 1.14.1，而不是其他版本。
+          required: true
+        - label: 若涉及冻结术语，我理解必须先取得项目发起人的新明确决定。
+          required: true
+        - label: 我没有附带官方 PDF、卡图、立绘或官方标志。
+          required: true

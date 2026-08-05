@@ -1,0 +1,22 @@
+---
+import type { RuleHeading } from "../lib/content-model";
+
+interface Props {
+  headings?: RuleHeading[];
+}
+
+const { headings = [] } = Astro.props;
+---
+
+{headings.length > 0 && (
+  <aside class="on-page-toc" aria-label="本页目录">
+    <strong>本页目录</strong>
+    <ol>
+      {headings.map((heading) => (
+        <li class={`toc-level-${heading.level}`}>
+          <a href={`#${heading.anchor}`}><span>{heading.number}</span>{heading.title}</a>
+        </li>
+      ))}
+    </ol>
+  </aside>
+)}

@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { loadSiteContent } from "../../lib/content-model";
+import { buildGlossarySearchText, termGoddessFilters } from "../../lib/search-normalization";
+import { categoryLabels, confidenceLabels, evidenceLevelLabels, glossaryAnchorHref, partLabel } from "../../lib/routes";
+import { sitePath } from "../../lib/site-path";
+
+export function getStaticPaths() {
+  return loadSiteContent().glossary.map((term) => ({ params: { id: term.id } }));
+}
+
+const content = loadSiteContent();
+const term = content.glossaryById.get(Astro.params.id!)!;
+const base = import.meta.env.BASE_URL;
+const goddesses = termGoddessFilters(term, content);
+const searchText = buildGlossarySearchText(term);
+---
+
+<BaseLayout
+  title={`${term.recommended_zh}｜术语`}
+  description={`${term.recommended_zh}（${term.ja}）的规范定义、说明、别名与规则锚点。`}
+  kind="术语"
+  category={term.category}
+  confidence={term.confidence}
+  goddess={goddesses}
+>
+  <article>
+    <header class="page-header">
+      <p class="eyebrow">规范术语 · 已锁定</p>
+      <h1 data-pagefind-weight="10">{term.recommended_zh}</h1>
+      <p lang="ja">{term.ja}</p>
+      <p><code>{term.id}</code></p>
+    </header>
+    <section class="glossary-entry">
+      <dl>
+        <dt>规范类别</dt>
+        <dd>{categoryLabels[term.category] ?? term.category}</dd>
+        <dt>严格定义</dt>
+        <dd>{term.strict_definition}</dd>
+        <dt>通俗说明</dt>
+        <dd>{term.plain_explanation}</dd>
+        <dt>社区别名</dt>
+        <dd>{term.aliases.length > 0 ? <><span>仅供检索，不用于规范正文：</span><ul class="tag-list">{term.aliases.map((alias) => <li>{alias}</li>)}</ul></> : "无"}</dd>
+        <dt>译名置信度</dt>
+        <dd>{confidenceLabels[term.confidence] ?? term.confidence}</dd>
+        <dt>审核状态</dt>
+        <dd><span class="status-tag">locked</span></dd>
+        <dt>规则锚点</dt>
+        <dd>
+          <ul>
+            {term.anchors.map((anchor) => (
+              <li><a href={glossaryAnchorHref(anchor, content, base)}>{partLabel(anchor.part)} · PDF {anchor.pdf_page}{anchor.rule ? ` · 规则 ${anchor.rule}` : ""}</a></li>
+            ))}
+          </ul>
+        </dd>
+        <dt>考据证据</dt>
+        <dd>
+          <ul>
+            {term.evidence.map((entry) => {
+              const source = content.glossarySourceById.get(entry.source_id)!;
+              return (
+                <li>
+                  <a href={source.url} rel="external">{source.title}</a>：{entry.role}
+                  <small>（{evidenceLevelLabels[source.evidence_level] ?? `证据等级 ${source.evidence_level}`}，访问于 {source.accessed_at}）</small>
+                </li>
+              );
+            })}
+          </ul>
+        </dd>
+        {term.conflict_note && <><dt>冲突说明</dt><dd>{term.conflict_note}</dd></>}
+      </dl>
+      <p class="search-aliases" data-pagefind-weight="2">搜索同义信息：{searchText}</p>
+      <p><a href={sitePath("/glossary/", base)}>返回 171 条术语总表</a></p>
+    </section>
+  </article>
+</BaseLayout>

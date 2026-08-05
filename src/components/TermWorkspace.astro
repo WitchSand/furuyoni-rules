@@ -1,0 +1,16 @@
+---
+interface Props {
+  glossaryUrl: string;
+}
+
+const { glossaryUrl } = Astro.props;
+---
+
+<term-workspace data-source={glossaryUrl} aria-label="术语工作区">
+  <button class="term-mobile-toggle" type="button" aria-expanded="false" hidden>
+    固定术语 <span class="term-count">0</span>
+  </button>
+  <section class="term-window-layer" aria-live="polite" aria-label="已固定术语"></section>
+  <section class="term-preview" role="tooltip" hidden></section>
+  <p class="term-workspace-fallback">选择正文中的下划线术语，可打开独立术语页；启用 JavaScript 后可使用速览与多浮窗工作区。</p>
+</term-workspace>

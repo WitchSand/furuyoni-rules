@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { loadSiteContent } from "../../lib/content-model";
+import { categoryLabels } from "../../lib/routes";
+import { sitePath } from "../../lib/site-path";
+
+const content = loadSiteContent();
+const base = import.meta.env.BASE_URL;
+const grouped = Object.entries(
+  Object.groupBy(content.glossary, (term) => term.category),
+).sort(([left], [right]) => (categoryLabels[left] ?? left).localeCompare(categoryLabels[right] ?? right, "zh-CN"));
+---
+
+<BaseLayout title="术语库" description="171 条已冻结规范术语的简中、日文、社区别名、定义与规则锚点。" kind="术语">
+  <header class="page-header">
+    <p class="eyebrow">171 条 · 全部 locked</p>
+    <h1>规范术语库</h1>
+    <p>正文只使用锁定的推荐简中。日文原词与社区别名仅用于考据、释义和检索，不会替代规范正文中的推荐名。</p>
+  </header>
+  {grouped.map(([category, terms]) => terms && (
+    <section class="panel" aria-labelledby={`category-${category}`}>
+      <h2 id={`category-${category}`}>{categoryLabels[category] ?? category} <small>{terms.length} 条</small></h2>
+      <ol class="glossary-grid">
+        {terms.map((term) => (
+          <li>
+            <a class="glossary-card" href={sitePath(`/glossary/${term.id}/`, base)}>
+              <strong>{term.recommended_zh}</strong>
+              <span lang="ja">{term.ja}</span>
+              <small>{term.id}</small>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+  ))}
+</BaseLayout>

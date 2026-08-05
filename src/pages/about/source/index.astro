@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { loadSiteContent, SOURCE_PDF_SHA256 } from "../../../lib/content-model";
+import { evidenceLevelLabels, sourceAccessibilityLabels } from "../../../lib/routes";
+
+const content = loadSiteContent();
+---
+
+<BaseLayout title="来源与非官方声明" description="规则底本、版本、哈希、修订标记、权利边界及纯静态发布说明。" kind="说明">
+  <header class="page-header">
+    <p class="eyebrow">来源与发布属性</p>
+    <h1>来源、版本与非官方声明</h1>
+    <p><strong>本项目是非营利、非官方的简体中文民间翻译。</strong></p>
+  </header>
+  <article class="panel">
+    <h2>规则底本</h2>
+    <dl class="source-facts">
+      <div class="fact-card"><dt>原作</dt><dd>《新幕 桜降る代に決闘を》</dd></div>
+      <div class="fact-card"><dt>权利方</dt><dd>BakaFire Party</dd></div>
+      <div class="fact-card"><dt>综合规则版本</dt><dd>{content.source.version}</dd></div>
+      <div class="fact-card"><dt>底本页数</dt><dd>{content.source.pages} 页</dd></div>
+    </dl>
+    <h3>底本 SHA-256</h3>
+    <p><code>{SOURCE_PDF_SHA256}</code></p>
+    <p>日文规则原文是规则语义、数值与结构的最高权威。简中资料只用于译名考据与表达参考。</p>
+
+    <h2>官方来源</h2>
+    <p>综合规则底本来自 BakaFire Party 官方《桜降る代に決闘を》网站。为避免在公开构建中再分发受限文件，本站不附带原 PDF；请从<a href="https://main-bakafire.ssl-lolipop.jp/furuyoni/sp/na/dl/furuyoni_comprehensive_rule.pdf" rel="external">官方综合规则 PDF（外部链接）</a>获取官方资料。</p>
+
+    <h2>术语考据来源</h2>
+    <p>以下来源只用于译名考据与表达参考，不覆盖日文底本的规则语义。每个术语页会单独列出其实际引用的来源。</p>
+    <ol class="source-list">
+      {content.glossarySources.map((source) => (
+        <li>
+          <h3><a href={source.url} rel="external">{source.title}</a></h3>
+          <p><strong>{evidenceLevelLabels[source.evidence_level] ?? `证据等级 ${source.evidence_level}`}</strong> · 访问日期 {source.accessed_at} · {sourceAccessibilityLabels[source.accessibility] ?? source.accessibility}</p>
+          <p>{source.evidence_summary}</p>
+          <p><strong>限制：</strong>{source.limitations}</p>
+        </li>
+      ))}
+    </ol>
+
+    <h2>修订标记</h2>
+    <p><span data-revision="2025-04-25-update">红色修订段（2025-04-25 更新）</span></p>
+    <p><span data-revision="2025-06-02-tweak">绿色修订段（2025-06-02 微調整）</span></p>
+    <p>两类标记同时使用文字标签、边框与背景，不只依靠颜色表达。</p>
+
+    <h2>公开构建边界</h2>
+    <p>站点是纯静态产物，不依赖服务器逻辑、数据库、CDN 字体或运行时外部脚本。公开构建不包含原 PDF、内部日文逐页稿、卡图、立绘或官方标志。底本第 45 页的机巧图示由原创 CSS 几何图形与“攻击、行动、付与、对应、全力”文字标签替代。</p>
+
+    <h2>版本解释</h2>
+    <p>本站仅对应综合规则 1.14.1。若官方发布更新版本，本站现有内容不会自动成为新版本规则。</p>
+  </article>
+</BaseLayout>

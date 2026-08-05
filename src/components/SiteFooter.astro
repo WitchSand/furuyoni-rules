@@ -1,0 +1,12 @@
+---
+import { sitePath } from "../lib/site-path";
+
+interface Props { base: string }
+const { base } = Astro.props;
+---
+
+<footer class="site-footer">
+  <p><strong>非营利、非官方简中民间翻译。</strong>《新幕 桜降る代に決闘を》及相关权利归原作者与 BakaFire Party 所有。</p>
+  <p>规则底本：综合规则 1.14.1 · 86 页 · SHA-256 <code>b96c743b343d7522db61af03952db73189283816868b8e8747f289a71801ab98</code></p>
+  <p><a href={sitePath("/about/source/", base)}>来源、修订标记与非官方声明</a></p>
+</footer>

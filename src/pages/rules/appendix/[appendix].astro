@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import RuleArticle from "../../../components/RuleArticle.astro";
+import { loadSiteContent } from "../../../lib/content-model";
+import { renderRuleMarkdown } from "../../../lib/rule-renderer";
+
+export function getStaticPaths() {
+  return loadSiteContent().appendices.map((appendix) => ({ params: { appendix: String(appendix.number).padStart(2, "0") } }));
+}
+
+const content = loadSiteContent();
+const number = Number(Astro.params.appendix) as 1 | 2;
+const appendix = content.appendices.find((entry) => entry.number === number)!;
+const base = import.meta.env.BASE_URL;
+const markdown = appendix.markdown.replace(/^#\s+.+$/m, "");
+const html = renderRuleMarkdown(markdown, { base, part: appendix.part, content });
+const previous = number === 1
+  ? { label: "追加规则 24", route: "/rules/additional/24/", title: content.additionalChapters.at(-1)!.title }
+  : { label: "附则 01", route: "/rules/appendix/01/", title: "女神列表" };
+const next = number === 1 ? { label: "附则 02", route: "/rules/appendix/02/", title: "勘误" } : undefined;
+---
+
+<BaseLayout title={appendix.title} description={`综合规则 1.14.1 ${appendix.title}。`} kind="规则">
+  <RuleArticle eyebrow={`附则 ${String(number).padStart(2, "0")}`} title={appendix.title} {html} sourcePages={appendix.sourcePages} {base} {previous} {next} />
+</BaseLayout>

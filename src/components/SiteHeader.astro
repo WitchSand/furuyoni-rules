@@ -1,0 +1,21 @@
+---
+import { sitePath } from "../lib/site-path";
+
+interface Props {
+  base: string;
+}
+
+const { base } = Astro.props;
+---
+
+<header class="site-header">
+  <a class="brand" href={sitePath("/", base)} aria-label="《散樱乱武 新幕》综合规则简中站首页">
+    <span class="brand-mark" aria-hidden="true">樱</span>
+    <span><strong>散樱乱武 新幕</strong><small>综合规则 1.14.1 · 简中民间翻译</small></span>
+  </a>
+  <nav class="header-actions" aria-label="站点快捷入口">
+    <a href={sitePath("/search/", base)}>全文搜索</a>
+    <a href={sitePath("/glossary/", base)}>术语库</a>
+    <a href={sitePath("/about/source/", base)}>来源说明</a>
+  </nav>
+</header>

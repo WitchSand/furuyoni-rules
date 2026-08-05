@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { sitePath } from "../lib/site-path";
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="页面不存在" description="请求的规则页面不存在。" kind="说明" noIndex>
+  <section class="page-header">
+    <p class="eyebrow">404</p>
+    <h1>没有找到这个页面</h1>
+    <p>章节路由使用固定数字编号。请返回<a href={sitePath("/rules/", base)}>完整规则目录</a>，或使用<a href={sitePath("/search/", base)}>全文搜索</a>。</p>
+  </section>
+</BaseLayout>

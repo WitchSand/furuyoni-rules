@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { loadSiteContent } from "../lib/content-model";
+import { sitePath } from "../lib/site-path";
+
+const content = loadSiteContent();
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="首页"
+  description="《散樱乱武 新幕》综合规则 1.14.1 的非营利、非官方简中民间翻译与交互式静态规则站。"
+  kind="说明"
+>
+  <header class="page-header">
+    <p class="eyebrow">综合规则 1.14.1 · 简体中文</p>
+    <h1>在一处阅读、检索并交叉查阅完整规则</h1>
+    <p>完整承载底本 86 页规范内容、10 章核心规则、24 章追加规则、女神列表、勘误与 171 条已冻结术语。</p>
+    <p class="notice"><strong>非营利、非官方简中民间翻译。</strong>规则语义以 BakaFire Party 发布的日文综合规则为最高权威。</p>
+    <p><a class="button-link" href={sitePath("/rules/core/01/", base)}>从核心规则开始</a></p>
+  </header>
+
+  <section class="panel" aria-labelledby="quick-entry-title">
+    <h2 id="quick-entry-title">快速入口</h2>
+    <div class="card-grid">
+      <a class="chapter-card" href={sitePath("/rules/front/", base)}><strong>封面与说明</strong><small>版本记录、前言与文档结构</small></a>
+      <a class="chapter-card" href={sitePath("/rules/", base)}><strong>完整规则目录</strong><small>34 个数字稳定章节路由与两项附则</small></a>
+      <a class="chapter-card" href={sitePath("/search/", base)}><strong>全文与术语搜索</strong><small>简中、日文、别名、女神名、规则编号与卡号</small></a>
+      <a class="chapter-card" href={sitePath("/glossary/", base)}><strong>171 条术语</strong><small>独立页面、锁定译名、严格定义与原文锚点</small></a>
+    </div>
+  </section>
+
+  <h2 class="section-heading">内容边界</h2>
+  <section class="source-facts" aria-label="规则站内容统计">
+    <div class="fact-card"><strong>{content.source.pages} 页</strong><small>底本 PDF 完整覆盖</small></div>
+    <div class="fact-card"><strong>{content.coreChapters.length} 章</strong><small>核心规则</small></div>
+    <div class="fact-card"><strong>{content.additionalChapters.length} 章</strong><small>追加规则</small></div>
+    <div class="fact-card"><strong>{content.glossary.length} 条</strong><small>全部 locked 的规范术语</small></div>
+  </section>
+</BaseLayout>

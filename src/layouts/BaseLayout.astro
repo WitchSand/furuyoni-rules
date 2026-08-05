@@ -1,0 +1,80 @@
+---
+import "../styles/global.css";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteNavigation from "../components/SiteNavigation.astro";
+import TermWorkspace from "../components/TermWorkspace.astro";
+import { loadSiteContent } from "../lib/content-model";
+import { sitePath } from "../lib/site-path";
+
+interface Props {
+  title: string;
+  description: string;
+  kind?: "规则" | "术语" | "说明" | "搜索";
+  category?: string;
+  confidence?: string;
+  goddess?: string | string[];
+  noIndex?: boolean;
+}
+
+const {
+  title,
+  description,
+  kind = "说明",
+  category,
+  confidence,
+  goddess,
+  noIndex = false,
+} = Astro.props;
+const content = loadSiteContent();
+const base = import.meta.env.BASE_URL;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const fullTitle = `${title}｜散樱乱武 新幕 综合规则`;
+const goddessValues = Array.isArray(goddess) ? goddess : goddess ? [goddess] : [];
+const favicon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%238f263d'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='38' fill='white'%3E%E6%A8%B1%3C/text%3E%3C/svg%3E";
+---
+
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" href={favicon} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    {noIndex && <meta name="robots" content="noindex" />}
+    <meta name="theme-color" content="#f7f2e8" />
+    <meta data-pagefind-meta="title[content]" content={title} />
+    <meta data-pagefind-filter="kind[content]" content={kind} />
+    {category && <meta data-pagefind-filter="category[content]" content={category} />}
+    {confidence && <meta data-pagefind-filter="confidence[content]" content={confidence} />}
+    {goddessValues.map((value) => <meta data-pagefind-filter="goddess[content]" content={value} />)}
+    <title>{fullTitle}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到正文</a>
+    <SiteHeader {base} />
+    <div class="site-frame">
+      <SiteNavigation
+        {base}
+        currentPath={Astro.url.pathname}
+        core={content.coreChapters}
+        additional={content.additionalChapters}
+      />
+      <main id="main-content" data-pagefind-body data-pagefind-ignore={noIndex ? true : undefined} tabindex="-1">
+        <slot />
+      </main>
+      <slot name="toc" />
+    </div>
+    <TermWorkspace glossaryUrl={sitePath("/data/glossary.json", base)} />
+    <SiteFooter {base} />
+    <script>
+      import "../scripts/site-runtime";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import RuleArticle from "../../../components/RuleArticle.astro";
+import { loadSiteContent } from "../../../lib/content-model";
+import { renderRuleMarkdown } from "../../../lib/rule-renderer";
+
+const content = loadSiteContent();
+const document = content.documents.find((entry) => entry.part === "front-matter")!;
+const base = import.meta.env.BASE_URL;
+const markdown = document.bodyMarkdown.replace(/^#\s+.+$/m, "");
+const html = renderRuleMarkdown(markdown, { base, part: "front-matter", content });
+---
+
+<BaseLayout title="封面与说明" description="综合规则 1.14.1 封面版本记录、前言与结构说明。" kind="规则">
+  <RuleArticle
+    eyebrow="封面与说明"
+    title="《散樱乱武 新幕》综合规则"
+    {html}
+    sourcePages={[1]}
+    {base}
+    next={{ label: "核心规则 01", route: "/rules/core/01/", title: content.coreChapters[0].title }}
+  />
+</BaseLayout>

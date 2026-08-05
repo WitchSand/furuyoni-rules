@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { loadSiteContent } from "../../lib/content-model";
+import { sitePath } from "../../lib/site-path";
+
+const content = loadSiteContent();
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="规则总目录" description="综合规则 1.14.1 完整数字稳定目录。" kind="说明">
+  <header class="page-header">
+    <p class="eyebrow">完整规则</p>
+    <h1>规则总目录</h1>
+    <p>章节网址只使用规则分部与数字编号，不依赖可能变化的显示译名。正文页保留规则编号、底本 PDF 页码与稳定锚点。</p>
+  </header>
+
+  <section class="panel">
+    <h2>核心规则</h2>
+    <ol class="chapter-grid">
+      {content.coreChapters.map((chapter) => (
+        <li><a class="chapter-card" href={sitePath(chapter.route, base)}><small>核心规则 {chapter.numberPadded}</small><strong>{chapter.title}</strong><span>PDF {chapter.sourcePages.join("、")}</span></a></li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="panel">
+    <h2>追加规则</h2>
+    <ol class="chapter-grid">
+      {content.additionalChapters.map((chapter) => (
+        <li><a class="chapter-card" href={sitePath(chapter.route, base)}><small>追加规则 {chapter.numberPadded}</small><strong>{chapter.title}</strong><span>PDF {chapter.sourcePages.join("、")}</span></a></li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="panel">
+    <h2>附则</h2>
+    <div class="chapter-grid">
+      <a class="chapter-card" href={sitePath("/rules/appendix/01/", base)}><small>附则 01</small><strong>女神列表</strong><span>PDF 75–84</span></a>
+      <a class="chapter-card" href={sitePath("/rules/appendix/02/", base)}><small>附则 02</small><strong>勘误</strong><span>PDF 85–86</span></a>
+    </div>
+  </section>
+</BaseLayout>
