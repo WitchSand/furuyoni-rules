@@ -1,6 +1,6 @@
 # GitHub Pages 部署说明
 
-最后更新：2026-08-05
+最后更新：2026-08-29
 
 ## 公开地址
 
@@ -67,6 +67,6 @@ npm run smoke:deployment -- --url https://witchsand.github.io/furuyoni-rules/
 
 ## Release 与回滚
 
-首发标签为 `v1.0.0`，与综合规则 1.14.1 对应。Release 不附带官方 PDF 或其他受限素材。
+首发标签 `v1.0.0` 与综合规则 1.14.1 的首次公开版本对应，保持不动。实卡术语修订以补丁标签 `v1.0.1` 发布，仍对应同一日文综合规则版本；修订范围和完整验收见 [`terminology-revision-2026-08-29.md`](../research/terminology-revision-2026-08-29.md)。所有 Release 均不附带官方 PDF 或其他受限素材。
 
 若线上冒烟失败，立即停止 Pages 发布并保留失败工作流和日志。修复通过 Pull Request 与全部门禁进入 `main`，不得强推、改写历史或混合新旧构建文件。后续版本可从已验证旧标签重新运行 Pages 工作流；内容错误使用 revert 或后续修正提交处理。

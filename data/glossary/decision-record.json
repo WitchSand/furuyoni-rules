@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "decision_id": "terminology-freeze-2026-08-04",
   "confirmed_at": "2026-08-04",
   "decision_source": "用户在当前任务中明确确认",
@@ -207,5 +207,135 @@
     "mechanic.innealra.lost",
     "mechanic.innealra.resonate"
   ],
-  "effect": "全部推荐简中转为 locked；原 provisional 状态只保留在本记录中用于审计。"
+  "effect": "全部推荐简中转为 locked；原 provisional 状态只保留在本记录中用于审计。",
+  "baseline_terms_artifact": {
+    "commit": "542178b",
+    "sha256": "04b09feb9f5c9d526828e330cd5b993a22bbb8f53a0e8c3136a4cf42166d3f17"
+  },
+  "current_decision_id": "terminology-revision-2026-08-29",
+  "applied_decision_ids": [
+    "terminology-freeze-2026-08-04",
+    "terminology-revision-2026-08-29"
+  ],
+  "amendments": [
+    {
+      "amendment_id": "terminology-revision-2026-08-29",
+      "base_decision_id": "terminology-freeze-2026-08-04",
+      "confirmed_at": "2026-08-29",
+      "decision_source": "用户填写术语修改意见表并在当前任务中明确确认",
+      "user_statement": "需修改内容已填写。对应的旧翻译放入别名，而新翻译若过去已存在于别名中，则从别名中删去，以免别名与新翻译内容重复。",
+      "scope": "整个规则集",
+      "evidence_basis": "用户基于多张实卡的整体比对确认；不要求逐词条记录适用范围或实卡索源。",
+      "source_artifact": {
+        "filename": "术语修改意见填写表_2026-08-29.xlsx",
+        "sha256": "417bac075dbcea8e752773ad0e3cbb4effab22cfa94a9b781a8f0dc552f1d1f9",
+        "filled_change_count": 6
+      },
+      "alias_policy": "从别名中删除新推荐名；将旧推荐名加入别名；按原顺序保序去重。",
+      "term_changes": [
+        {
+          "term_id": "zone.attack-in-progress",
+          "from": "攻击中区",
+          "to": "攻击中",
+          "aliases_before": [
+            "攻击中",
+            "攻击处理区"
+          ],
+          "aliases_after": [
+            "攻击处理区",
+            "攻击中区"
+          ],
+          "conflict_note_before": "底本可确定区域语义，但未取得可复核简中用名；“攻击中区”“攻击处理区”与直留“攻击中”均需裁决。",
+          "conflict_note_after": "冻结前简中证据不足；2026-08-29 用户依据实卡整体比对明确将规范名从“攻击中区”修订为“攻击中”。"
+        },
+        {
+          "term_id": "goddess.21",
+          "from": "卡姆伊",
+          "to": "神居",
+          "aliases_before": [
+            "KAMUWI",
+            "卡姆依"
+          ],
+          "aliases_after": [
+            "KAMUWI",
+            "卡姆依",
+            "卡姆伊"
+          ],
+          "conflict_note_before": "无充分简中来源，当前采用音译。",
+          "conflict_note_after": "冻结前无充分简中来源，曾采用音译“卡姆伊”；2026-08-29 用户依据实卡整体比对明确修订为“神居”。"
+        },
+        {
+          "term_id": "goddess.24",
+          "from": "西斯伊",
+          "to": "志水",
+          "aliases_before": [
+            "SHISUI",
+            "锯子",
+            "志水",
+            "紫水"
+          ],
+          "aliases_after": [
+            "SHISUI",
+            "锯子",
+            "紫水",
+            "西斯伊"
+          ],
+          "conflict_note_before": "无充分简中来源；当前为音译，社区俗称“锯子”不可进入规范正文。",
+          "conflict_note_after": "冻结前无充分简中来源，曾采用音译“西斯伊”；2026-08-29 用户依据实卡整体比对明确修订为“志水”。社区俗称“锯子”仍仅作检索别名。"
+        },
+        {
+          "term_id": "goddess.nonselectable.kodama",
+          "from": "科达玛",
+          "to": "菰珠",
+          "aliases_before": [
+            "KODAMA",
+            "木灵"
+          ],
+          "aliases_after": [
+            "KODAMA",
+            "木灵",
+            "科达玛"
+          ],
+          "conflict_note_before": "缺少可复核简中来源，当前采用音译；不应在确认前固化。",
+          "conflict_note_after": "冻结前缺少可复核简中来源，曾采用音译“科达玛”；2026-08-29 用户依据实卡整体比对明确修订为“菰珠”。"
+        },
+        {
+          "term_id": "goddess.nonselectable.zanka",
+          "from": "赞卡",
+          "to": "斩华",
+          "aliases_before": [
+            "ZANKA",
+            "斩华"
+          ],
+          "aliases_after": [
+            "ZANKA",
+            "赞卡"
+          ],
+          "conflict_note_before": "缺少可复核简中来源，当前采用音译；不应在确认前固化。",
+          "conflict_note_after": "冻结前缺少可复核简中来源，曾采用音译“赞卡”；2026-08-29 用户依据实卡整体比对明确修订为“斩华”。"
+        },
+        {
+          "term_id": "goddess.nonselectable.wouka",
+          "from": "沃卡",
+          "to": "奥华",
+          "aliases_before": [
+            "WOUKA",
+            "樱华"
+          ],
+          "aliases_after": [
+            "WOUKA",
+            "樱华",
+            "沃卡"
+          ],
+          "conflict_note_before": "缺少可复核简中来源，当前采用音译；不应在确认前固化。",
+          "conflict_note_after": "冻结前缺少可复核简中来源，曾采用音译“沃卡”；2026-08-29 用户依据实卡整体比对明确修订为“奥华”。"
+        }
+      ],
+      "additional_alias_normalization_ids": [
+        "phase.beginning",
+        "phase.ending"
+      ],
+      "effect": "六项现行推荐名及整个规则集中的规范用法同步修订；全部 171 条术语保持 locked。"
+    }
+  ]
 }

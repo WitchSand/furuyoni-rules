@@ -346,6 +346,8 @@ function validateTerms(
     invariant(Boolean(term.recommended_zh), `${term.id} 缺少推荐简中`);
     invariant(Boolean(term.ja), `${term.id} 缺少日文原词`);
     invariant(Array.isArray(term.aliases), `${term.id} 别名不是数组`);
+    invariant(new Set(term.aliases).size === term.aliases.length, `${term.id} 别名存在重复`);
+    invariant(!term.aliases.includes(term.recommended_zh), `${term.id} 推荐名与别名重复`);
     invariant(Boolean(term.strict_definition), `${term.id} 缺少严格定义`);
     invariant(Boolean(term.plain_explanation), `${term.id} 缺少白话说明`);
     invariant(Array.isArray(term.anchors) && term.anchors.length > 0, `${term.id} 缺少规则锚点`);

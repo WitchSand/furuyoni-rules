@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -10,6 +11,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "glossary" / "terms.json"
 DECISION_OUTPUT = ROOT / "data" / "glossary" / "decision-record.json"
+INITIAL_DECISION_ID = "terminology-freeze-2026-08-04"
+REVISION_DECISION_ID = "terminology-revision-2026-08-29"
+BASELINE_TERMS_SHA256 = "04b09feb9f5c9d526828e330cd5b993a22bbb8f53a0e8c3136a4cf42166d3f17"
+FILLED_WORKBOOK_SHA256 = "417bac075dbcea8e752773ad0e3cbb4effab22cfa94a9b781a8f0dc552f1d1f9"
 
 terms: list[dict[str, object]] = []
 
@@ -331,7 +336,7 @@ if len(terms) != 171 or pre_lock_status_counts != {"review": 150, "provisional":
 for term in terms:
     term["review_status"] = "locked"
 
-document = {
+baseline_document = {
     "schema_version": 1,
     "source_pdf_sha256": "b96c743b343d7522db61af03952db73189283816868b8e8747f289a71801ab98",
     "generated_at": "2026-08-04",
@@ -342,10 +347,118 @@ document = {
     },
     "terms": terms,
 }
+baseline_payload = json.dumps(baseline_document, ensure_ascii=False, indent=2) + "\n"
+baseline_sha256 = hashlib.sha256(baseline_payload.encode("utf-8")).hexdigest()
+if baseline_sha256 != BASELINE_TERMS_SHA256:
+    raise ValueError(
+        "2026-08-04 冻结术语基线发生漂移："
+        f"expected={BASELINE_TERMS_SHA256}, actual={baseline_sha256}"
+    )
+
+# 统一消除推荐名与自身别名的历史重复；这两项只属于数据卫生修正，不改变规范译名。
+self_alias_cleanup_ids: list[str] = []
+for term in terms:
+    original_aliases = list(term["aliases"])
+    normalized_aliases = list(
+        dict.fromkeys(
+            alias
+            for alias in original_aliases
+            if alias and alias != term["recommended_zh"]
+        )
+    )
+    if normalized_aliases != original_aliases:
+        self_alias_cleanup_ids.append(str(term["id"]))
+        term["aliases"] = normalized_aliases
+
+revision_seed = [
+    (
+        "zone.attack-in-progress",
+        "攻击中区",
+        "攻击中",
+        "冻结前简中证据不足；2026-08-29 用户依据实卡整体比对明确将规范名从“攻击中区”修订为“攻击中”。",
+    ),
+    (
+        "goddess.21",
+        "卡姆伊",
+        "神居",
+        "冻结前无充分简中来源，曾采用音译“卡姆伊”；2026-08-29 用户依据实卡整体比对明确修订为“神居”。",
+    ),
+    (
+        "goddess.24",
+        "西斯伊",
+        "志水",
+        "冻结前无充分简中来源，曾采用音译“西斯伊”；2026-08-29 用户依据实卡整体比对明确修订为“志水”。社区俗称“锯子”仍仅作检索别名。",
+    ),
+    (
+        "goddess.nonselectable.kodama",
+        "科达玛",
+        "菰珠",
+        "冻结前缺少可复核简中来源，曾采用音译“科达玛”；2026-08-29 用户依据实卡整体比对明确修订为“菰珠”。",
+    ),
+    (
+        "goddess.nonselectable.zanka",
+        "赞卡",
+        "斩华",
+        "冻结前缺少可复核简中来源，曾采用音译“赞卡”；2026-08-29 用户依据实卡整体比对明确修订为“斩华”。",
+    ),
+    (
+        "goddess.nonselectable.wouka",
+        "沃卡",
+        "奥华",
+        "冻结前缺少可复核简中来源，曾采用音译“沃卡”；2026-08-29 用户依据实卡整体比对明确修订为“奥华”。",
+    ),
+]
+term_map = {str(item["id"]): item for item in terms}
+revision_changes: list[dict[str, object]] = []
+for term_id, old_name, new_name, revised_conflict_note in revision_seed:
+    term = term_map[term_id]
+    if term["recommended_zh"] != old_name:
+        raise ValueError(
+            f"{term_id} 修订前推荐名应为“{old_name}”，实际为“{term['recommended_zh']}”"
+        )
+    aliases_before = list(term["aliases"])
+    aliases_after = [alias for alias in aliases_before if alias != new_name]
+    if old_name not in aliases_after:
+        aliases_after.append(old_name)
+    aliases_after = list(dict.fromkeys(aliases_after))
+    conflict_note_before = str(term["conflict_note"])
+    term["recommended_zh"] = new_name
+    term["aliases"] = aliases_after
+    term["conflict_note"] = revised_conflict_note
+    revision_changes.append(
+        {
+            "term_id": term_id,
+            "from": old_name,
+            "to": new_name,
+            "aliases_before": aliases_before,
+            "aliases_after": aliases_after,
+            "conflict_note_before": conflict_note_before,
+            "conflict_note_after": revised_conflict_note,
+        }
+    )
+
+# 女神机制定义引用现行规范名；稳定 ID、英文 slug 与卡号保持不变。
+for term_id in ("mechanic.kamuwi.oath", "mechanic.kamuwi.taboo"):
+    term_map[term_id]["strict_definition"] = str(
+        term_map[term_id]["strict_definition"]
+    ).replace("卡姆伊", "神居")
+
+document = {
+    "schema_version": 2,
+    "source_pdf_sha256": "b96c743b343d7522db61af03952db73189283816868b8e8747f289a71801ab98",
+    "generated_at": "2026-08-29",
+    "applied_decision_ids": [INITIAL_DECISION_ID, REVISION_DECISION_ID],
+    "status_policy": {
+        "locked": "171 条术语于 2026-08-04 初始冻结，其中 6 条于 2026-08-29 经用户明确修订；规范正文必须使用现行推荐简中",
+        "review": "冻结前历史状态：已有推荐方案、等待用户审核",
+        "provisional": "冻结前历史状态：证据不足或冲突显著；21 条初始推荐名曾由用户明确接受",
+    },
+    "terms": terms,
+}
 
 decision_record = {
-    "schema_version": 1,
-    "decision_id": "terminology-freeze-2026-08-04",
+    "schema_version": 2,
+    "decision_id": INITIAL_DECISION_ID,
     "confirmed_at": "2026-08-04",
     "decision_source": "用户在当前任务中明确确认",
     "user_statement": "接受审核文档全部 171 条推荐方案，包括 21 条 provisional 的当前推荐名。",
@@ -356,6 +469,32 @@ decision_record = {
     "provisional_term_ids": provisional_term_ids,
     "accepted_term_ids": [str(item["id"]) for item in terms],
     "effect": "全部推荐简中转为 locked；原 provisional 状态只保留在本记录中用于审计。",
+    "baseline_terms_artifact": {
+        "commit": "542178b",
+        "sha256": BASELINE_TERMS_SHA256,
+    },
+    "current_decision_id": REVISION_DECISION_ID,
+    "applied_decision_ids": [INITIAL_DECISION_ID, REVISION_DECISION_ID],
+    "amendments": [
+        {
+            "amendment_id": REVISION_DECISION_ID,
+            "base_decision_id": INITIAL_DECISION_ID,
+            "confirmed_at": "2026-08-29",
+            "decision_source": "用户填写术语修改意见表并在当前任务中明确确认",
+            "user_statement": "需修改内容已填写。对应的旧翻译放入别名，而新翻译若过去已存在于别名中，则从别名中删去，以免别名与新翻译内容重复。",
+            "scope": "整个规则集",
+            "evidence_basis": "用户基于多张实卡的整体比对确认；不要求逐词条记录适用范围或实卡索源。",
+            "source_artifact": {
+                "filename": "术语修改意见填写表_2026-08-29.xlsx",
+                "sha256": FILLED_WORKBOOK_SHA256,
+                "filled_change_count": len(revision_changes),
+            },
+            "alias_policy": "从别名中删除新推荐名；将旧推荐名加入别名；按原顺序保序去重。",
+            "term_changes": revision_changes,
+            "additional_alias_normalization_ids": self_alias_cleanup_ids,
+            "effect": "六项现行推荐名及整个规则集中的规范用法同步修订；全部 171 条术语保持 locked。",
+        }
+    ],
 }
 
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)

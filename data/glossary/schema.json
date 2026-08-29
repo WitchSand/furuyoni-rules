@@ -3,11 +3,17 @@
   "$id": "https://example.invalid/furuyoni/glossary.schema.json",
   "title": "散樱乱武术语审核数据",
   "type": "object",
-  "required": ["schema_version", "source_pdf_sha256", "generated_at", "status_policy", "terms"],
+  "required": ["schema_version", "source_pdf_sha256", "generated_at", "applied_decision_ids", "status_policy", "terms"],
   "properties": {
-    "schema_version": { "const": 1 },
+    "schema_version": { "const": 2 },
     "source_pdf_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
     "generated_at": { "type": "string", "format": "date" },
+    "applied_decision_ids": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
     "status_policy": { "type": "object" },
     "terms": {
       "type": "array",
@@ -44,7 +50,7 @@
           },
           "recommended_zh": { "type": "string", "minLength": 1 },
           "ja": { "type": "string", "minLength": 1 },
-          "aliases": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+          "aliases": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
           "strict_definition": { "type": "string", "minLength": 1 },
           "plain_explanation": { "type": "string", "minLength": 1 },
           "anchors": {

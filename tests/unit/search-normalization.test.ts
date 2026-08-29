@@ -4,6 +4,7 @@ import { loadSiteContent } from "../../src/lib/content-model";
 import {
   additionalChapterGoddess,
   buildGlossarySearchText,
+  glossaryTermMatchesQuery,
   normalizeSearchText,
   termGoddessFilters,
 } from "../../src/lib/search-normalization";
@@ -24,6 +25,30 @@ describe("搜索规范化", () => {
     expect(text).toContain("散樱乱武 新幕");
     expect(text).toContain("新幕 桜降る代に決闘を");
     expect(text).toContain("新幕散樱乱武");
+  });
+
+  it("2026-08-29 修订项使用新推荐名并保留旧译检索", () => {
+    const revisions = [
+      ["zone.attack-in-progress", "攻击中区", "攻击中"],
+      ["goddess.21", "卡姆伊", "神居"],
+      ["goddess.24", "西斯伊", "志水"],
+      ["goddess.nonselectable.kodama", "科达玛", "菰珠"],
+      ["goddess.nonselectable.zanka", "赞卡", "斩华"],
+      ["goddess.nonselectable.wouka", "沃卡", "奥华"],
+    ] as const;
+
+    for (const [id, previousName, currentName] of revisions) {
+      const term = content.glossaryById.get(id);
+      expect(term).toBeDefined();
+      expect(term!.recommended_zh).toBe(currentName);
+      expect(term!.aliases).toContain(previousName);
+      expect(term!.aliases).not.toContain(currentName);
+      expect(new Set(term!.aliases).size).toBe(term!.aliases.length);
+      expect(buildGlossarySearchText(term!)).toContain(previousName);
+      expect(buildGlossarySearchText(term!)).toContain(currentName);
+      expect(glossaryTermMatchesQuery(term!, previousName)).toBe(true);
+      expect(glossaryTermMatchesQuery(term!, currentName)).toBe(true);
+    }
   });
 
   it("从追加规则锚点生成稳定的女神筛选值", () => {
