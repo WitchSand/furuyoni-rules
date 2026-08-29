@@ -11,11 +11,11 @@ part: appendix-1
 
 双掌缭乱中可以选择的女神如下。
 
-《摇波》《[[细音|goddess.02]]》《[[绯弥香|goddess.03]]》《[[常世|goddess.04]]》《胧》《雪灯》《森罗》《破钟》《千影》《枢》《萨莉娅》《雷螺》《虚路》《仄佳》《凝努》《八叶》《波津》《水津城》《希》《叶慧》《卡姆伊》《恋离》《安岐那》《西斯伊》《御空》<span data-revision="2025-04-25-update">《伊尼尔》（2025-04-25 更新）</span>
+《摇波》《[[细音|goddess.02]]》《[[绯弥香|goddess.03]]》《[[常世|goddess.04]]》《胧》《雪灯》《森罗》《破钟》《千影》《枢》《萨莉娅》《雷螺》《虚路》《仄佳》《凝努》《八叶》《波津》《水津城》《希》《叶慧》《神居》《恋离》《安岐那》《志水》《御空》<span data-revision="2025-04-25-update">《伊尼尔》（2025-04-25 更新）</span>
 
 此外，存在以下不能在双掌缭乱中选择的女神。
 
-《[[科达玛|goddess.nonselectable.kodama]]》《[[桐子|goddess.nonselectable.kiriko]]》《[[赞卡|goddess.nonselectable.zanka]]》《[[沃卡|goddess.nonselectable.wouka]]》
+《[[菰珠|goddess.nonselectable.kodama]]》《[[桐子|goddess.nonselectable.kiriko]]》《[[斩华|goddess.nonselectable.zanka]]》《[[奥华|goddess.nonselectable.wouka]]》
 
 ## 卡牌列表
 
@@ -251,7 +251,7 @@ part: appendix-1
 
 ※卡牌编号为“NA-18-mizuki-O-S-3-Ex1”“NA-18-mizuki-O-T-1”“NA-18-mizuki-O-T-2”“NA-18-mizuki-O-T-3”的卡牌不能用于眼前构筑。
 
-※卡牌编号为“NA-18-mizuki-O-N-3”“NA-18-mizuki-O-N-7”“NA-18-mizuki-O-S-3-Ex1”的卡牌，使用者为《科达玛》。
+※卡牌编号为“NA-18-mizuki-O-N-3”“NA-18-mizuki-O-N-7”“NA-18-mizuki-O-S-3-Ex1”的卡牌，使用者为《菰珠》。
 
 <!-- /source-page -->
 <!-- source-page: 82; printed-page: 8; part: appendix-1 -->
@@ -270,7 +270,7 @@ part: appendix-1
 
 <!-- source-anomaly: p82-kanawe-conception-format; source-literals: P-1 / P-6; handling: preserved-verbatim-not-zero-padded -->
 
-### 选择卡姆伊时
+### 选择神居时
 
 卡牌编号为“NA-21-kamuwi-O-N-1”至“NA-21-kamuwi-O-N-7”的通常牌，卡牌编号为“NA-21-kamuwi-O-S-1”至“NA-21-kamuwi-O-S-4”的王牌，以及卡牌编号为“NA-21-kamuwi-O-S-1-Ex1”的王牌。
 
@@ -292,9 +292,9 @@ part: appendix-1
 
 ※卡牌编号为“NA-22-renri-A1-N-6-Ex1”至“NA-22-renri-A1-N-6-Ex3”的卡牌不能用于眼前构筑。
 
-※卡牌编号为“NA-22-renri-A1-N-6-Ex2”的卡牌，使用者为《赞卡》。
+※卡牌编号为“NA-22-renri-A1-N-6-Ex2”的卡牌，使用者为《斩华》。
 
-※卡牌编号为“NA-22-renri-A1-N-6-Ex3”的卡牌，使用者为《沃卡》。
+※卡牌编号为“NA-22-renri-A1-N-6-Ex3”的卡牌，使用者为《奥华》。
 
 <!-- /source-page -->
 <!-- source-page: 83; printed-page: 9; part: appendix-1 -->
@@ -303,7 +303,7 @@ part: appendix-1
 
 卡牌编号为“NA-23-akina-O-N-1”至“NA-23-akina-O-N-7”的通常牌，以及卡牌编号为“NA-23-akina-O-S-1”至“NA-23-akina-O-S-4”的王牌。
 
-### 选择西斯伊时
+### 选择志水时
 
 卡牌编号为“NA-24-shisui-O-N-1”至“NA-24-shisui-O-N-7”的通常牌，以及卡牌编号为“NA-24-shisui-O-S-1”至“NA-24-shisui-O-S-4”的王牌。
 

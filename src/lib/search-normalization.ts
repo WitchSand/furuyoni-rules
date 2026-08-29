@@ -23,6 +23,14 @@ export function buildGlossarySearchText(term: GlossaryTerm): string {
     .join(" · ");
 }
 
+export function glossaryTermMatchesQuery(term: GlossaryTerm, query: string): boolean {
+  const normalizedQuery = normalizeSearchText(query);
+  if (!normalizedQuery) return false;
+  return [term.recommended_zh, term.ja, ...term.aliases, term.id]
+    .map(normalizeSearchText)
+    .some((value) => value.includes(normalizedQuery));
+}
+
 export function additionalChapterGoddess(
   chapterNumber: number,
   content: SiteContent,

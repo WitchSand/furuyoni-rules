@@ -1,11 +1,15 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source_pdf_sha256": "b96c743b343d7522db61af03952db73189283816868b8e8747f289a71801ab98",
-  "generated_at": "2026-08-04",
+  "generated_at": "2026-08-29",
+  "applied_decision_ids": [
+    "terminology-freeze-2026-08-04",
+    "terminology-revision-2026-08-29"
+  ],
   "status_policy": {
-    "locked": "用户已于 2026-08-04 批量接受全部 171 条推荐方案；规范正文必须使用推荐简中",
+    "locked": "171 条术语于 2026-08-04 初始冻结，其中 6 条于 2026-08-29 经用户明确修订；规范正文必须使用现行推荐简中",
     "review": "冻结前历史状态：已有推荐方案、等待用户审核",
-    "provisional": "冻结前历史状态：证据不足或冲突显著；21 条当前推荐名已由用户明确接受"
+    "provisional": "冻结前历史状态：证据不足或冲突显著；21 条初始推荐名曾由用户明确接受"
   },
   "terms": [
     {
@@ -745,11 +749,11 @@
     {
       "id": "zone.attack-in-progress",
       "category": "region_resource",
-      "recommended_zh": "攻击中区",
+      "recommended_zh": "攻击中",
       "ja": "攻撃中",
       "aliases": [
-        "攻击中",
-        "攻击处理区"
+        "攻击处理区",
+        "攻击中区"
       ],
       "strict_definition": "与玩家关联、在攻击生成与结算期间暂时容纳攻击对象的＜攻撃中＞区域。",
       "plain_explanation": "一次攻击正在处理时所在的区域。",
@@ -769,7 +773,7 @@
       "confidence": "low",
       "review_status": "locked",
       "impact": "high",
-      "conflict_note": "底本可确定区域语义，但未取得可复核简中用名；“攻击中区”“攻击处理区”与直留“攻击中”均需裁决。"
+      "conflict_note": "冻结前简中证据不足；2026-08-29 用户依据实卡整体比对明确将规范名从“攻击中区”修订为“攻击中”。"
     },
     {
       "id": "zone.out-of-game",
@@ -1664,8 +1668,7 @@
       "recommended_zh": "开始阶段",
       "ja": "開始フェイズ",
       "aliases": [
-        "准备阶段",
-        "开始阶段"
+        "准备阶段"
       ],
       "strict_definition": "回合的第一个阶段，依 8-1 顺序处理开始阶段步骤。",
       "plain_explanation": "每回合最先进行重铸、抽牌等处理的阶段。",
@@ -1736,9 +1739,7 @@
       "category": "phase_action",
       "recommended_zh": "结束阶段",
       "ja": "終了フェイズ",
-      "aliases": [
-        "结束阶段"
-      ],
+      "aliases": [],
       "strict_definition": "主要阶段后，按 8-3 处理结束阶段步骤并结束回合的阶段。",
       "plain_explanation": "回合收尾、处理结束触发的阶段。",
       "anchors": [
@@ -3705,11 +3706,12 @@
     {
       "id": "goddess.21",
       "category": "goddess",
-      "recommended_zh": "卡姆伊",
+      "recommended_zh": "神居",
       "ja": "カムヰ",
       "aliases": [
         "KAMUWI",
-        "卡姆依"
+        "卡姆依",
+        "卡姆伊"
       ],
       "strict_definition": "附则一女神列表中编号为 21 的可选女神。",
       "plain_explanation": "女神 カムヰ 的当前推荐简中名。",
@@ -3729,7 +3731,7 @@
       "confidence": "low",
       "review_status": "locked",
       "impact": "high",
-      "conflict_note": "无充分简中来源，当前采用音译。"
+      "conflict_note": "冻结前无充分简中来源，曾采用音译“卡姆伊”；2026-08-29 用户依据实卡整体比对明确修订为“神居”。"
     },
     {
       "id": "goddess.22",
@@ -3801,13 +3803,13 @@
     {
       "id": "goddess.24",
       "category": "goddess",
-      "recommended_zh": "西斯伊",
+      "recommended_zh": "志水",
       "ja": "シスイ",
       "aliases": [
         "SHISUI",
         "锯子",
-        "志水",
-        "紫水"
+        "紫水",
+        "西斯伊"
       ],
       "strict_definition": "附则一女神列表中编号为 24 的可选女神。",
       "plain_explanation": "女神 シスイ 的当前推荐简中名。",
@@ -3827,7 +3829,7 @@
       "confidence": "low",
       "review_status": "locked",
       "impact": "high",
-      "conflict_note": "无充分简中来源；当前为音译，社区俗称“锯子”不可进入规范正文。"
+      "conflict_note": "冻结前无充分简中来源，曾采用音译“西斯伊”；2026-08-29 用户依据实卡整体比对明确修订为“志水”。社区俗称“锯子”仍仅作检索别名。"
     },
     {
       "id": "goddess.25",
@@ -3895,11 +3897,12 @@
     {
       "id": "goddess.nonselectable.kodama",
       "category": "goddess",
-      "recommended_zh": "科达玛",
+      "recommended_zh": "菰珠",
       "ja": "コダマ",
       "aliases": [
         "KODAMA",
-        "木灵"
+        "木灵",
+        "科达玛"
       ],
       "strict_definition": "附则一列出的不可在双掌缭乱中选择、但可作为卡牌使用者出现的女神。",
       "plain_explanation": "规则里会出现，但不能直接选择的女神 コダマ。",
@@ -3919,7 +3922,7 @@
       "confidence": "low",
       "review_status": "locked",
       "impact": "low",
-      "conflict_note": "缺少可复核简中来源，当前采用音译；不应在确认前固化。"
+      "conflict_note": "冻结前缺少可复核简中来源，曾采用音译“科达玛”；2026-08-29 用户依据实卡整体比对明确修订为“菰珠”。"
     },
     {
       "id": "goddess.nonselectable.kiriko",
@@ -3952,11 +3955,11 @@
     {
       "id": "goddess.nonselectable.zanka",
       "category": "goddess",
-      "recommended_zh": "赞卡",
+      "recommended_zh": "斩华",
       "ja": "ザンカ",
       "aliases": [
         "ZANKA",
-        "斩华"
+        "赞卡"
       ],
       "strict_definition": "附则一列出的不可在双掌缭乱中选择、但可作为卡牌使用者出现的女神。",
       "plain_explanation": "规则里会出现，但不能直接选择的女神 ザンカ。",
@@ -3976,16 +3979,17 @@
       "confidence": "low",
       "review_status": "locked",
       "impact": "low",
-      "conflict_note": "缺少可复核简中来源，当前采用音译；不应在确认前固化。"
+      "conflict_note": "冻结前缺少可复核简中来源，曾采用音译“赞卡”；2026-08-29 用户依据实卡整体比对明确修订为“斩华”。"
     },
     {
       "id": "goddess.nonselectable.wouka",
       "category": "goddess",
-      "recommended_zh": "沃卡",
+      "recommended_zh": "奥华",
       "ja": "ヲウカ",
       "aliases": [
         "WOUKA",
-        "樱华"
+        "樱华",
+        "沃卡"
       ],
       "strict_definition": "附则一列出的不可在双掌缭乱中选择、但可作为卡牌使用者出现的女神。",
       "plain_explanation": "规则里会出现，但不能直接选择的女神 ヲウカ。",
@@ -4005,7 +4009,7 @@
       "confidence": "low",
       "review_status": "locked",
       "impact": "low",
-      "conflict_note": "缺少可复核简中来源，当前采用音译；不应在确认前固化。"
+      "conflict_note": "冻结前缺少可复核简中来源，曾采用音译“沃卡”；2026-08-29 用户依据实卡整体比对明确修订为“奥华”。"
     },
     {
       "id": "mechanic.yurina.resolve",
@@ -5163,7 +5167,7 @@
       "recommended_zh": "誓约",
       "ja": "誓約",
       "aliases": [],
-      "strict_definition": "卡姆伊部分牌持有、依据禁忌值和追加规则约束使用的关键字。",
+      "strict_definition": "神居部分牌持有、依据禁忌值和追加规则约束使用的关键字。",
       "plain_explanation": "使用强力牌时要遵守的禁忌条件。",
       "anchors": [
         {
@@ -5195,7 +5199,7 @@
       "aliases": [
         "禁忌值"
       ],
-      "strict_definition": "卡姆伊玩家持有的公开数值；达到规则界限会触发败北相关处理。",
+      "strict_definition": "神居玩家持有的公开数值；达到规则界限会触发败北相关处理。",
       "plain_explanation": "力量越用越危险，数值过高会输。",
       "anchors": [
         {

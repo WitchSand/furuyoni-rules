@@ -116,6 +116,35 @@ for (const url of assetUrls) {
 const glossaryResponse = await fetchText("data/glossary.json");
 const glossary = JSON.parse(glossaryResponse.text);
 if (!Array.isArray(glossary.terms) || glossary.terms.length !== 171) fail("线上术语 JSON 不是 171 条");
+const revisedTerms = [
+  ["zone.attack-in-progress", "攻击中区", "攻击中"],
+  ["goddess.21", "卡姆伊", "神居"],
+  ["goddess.24", "西斯伊", "志水"],
+  ["goddess.nonselectable.kodama", "科达玛", "菰珠"],
+  ["goddess.nonselectable.zanka", "赞卡", "斩华"],
+  ["goddess.nonselectable.wouka", "沃卡", "奥华"],
+];
+for (const [id, previousName, currentName] of revisedTerms) {
+  const term = glossary.terms.find((candidate) => candidate.id === id);
+  if (!term) fail(`线上术语 JSON 缺少 ${id}`);
+  if (term.recommended_zh !== currentName) fail(`${id} 的线上推荐名不是“${currentName}”`);
+  if (!term.aliases.includes(previousName)) fail(`${id} 未在线上别名中保留旧译“${previousName}”`);
+  if (term.aliases.includes(currentName)) fail(`${id} 的线上别名仍与推荐名“${currentName}”重复`);
+}
+
+const normativeChecks = [
+  ["/rules/core/07/", "攻击中", "攻击中区"],
+  ["/rules/additional/19/", "神居", "卡姆伊"],
+  ["/rules/additional/22/", "志水", "西斯伊"],
+  ["/rules/appendix/01/", "菰珠", "科达玛"],
+  ["/rules/appendix/01/", "斩华", "赞卡"],
+  ["/rules/appendix/01/", "奥华", "沃卡"],
+];
+for (const [route, currentName, previousName] of normativeChecks) {
+  const page = pages.find((candidate) => candidate.url.pathname.endsWith(route));
+  if (!page?.text.includes(currentName)) fail(`${route} 缺少现行译名“${currentName}”`);
+  if (page.text.includes(previousName)) fail(`${route} 的规范正文仍含旧译“${previousName}”`);
+}
 
 const wrongBase = new URL("/rules/core/05/", baseUrl.origin);
 const wrongBaseResponse = await fetchWithRetry(wrongBase, { redirect: "manual" });
@@ -128,6 +157,7 @@ console.log(JSON.stringify({
   routes: routes.length,
   deepLink: `${baseUrl}rules/core/05/#rule-5-8-3`,
   glossaryTerms: glossary.terms.length,
+  revisedTerms: revisedTerms.length,
   checkedAssets: assetUrls.size,
   custom404: true,
   wrongBase404: true,

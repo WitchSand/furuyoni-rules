@@ -121,6 +121,23 @@ test("搜索覆盖简中、日文、社区别名、女神名、卡号与组合�
   await search(page, "NA-10-kururu-A1-S-3-Ex1");
   await expect(page.locator('.search-result a[href*="/rules/"]').first()).toBeVisible();
 
+  const revisedAliases = [
+    ["攻击中区", "/glossary/zone.attack-in-progress/", "攻击中"],
+    ["卡姆伊", "/glossary/goddess.21/", "神居"],
+    ["西斯伊", "/glossary/goddess.24/", "志水"],
+    ["科达玛", "/glossary/goddess.nonselectable.kodama/", "菰珠"],
+    ["赞卡", "/glossary/goddess.nonselectable.zanka/", "斩华"],
+    ["沃卡", "/glossary/goddess.nonselectable.wouka/", "奥华"],
+  ] as const;
+  for (const [previousName, route, currentName] of revisedAliases) {
+    await test.step(`旧译“${previousName}”可检索到“${currentName}”`, async () => {
+      await search(page, previousName);
+      const result = page.locator(`.search-result a[href*="${route}"]`).first();
+      await expect(result).toBeVisible();
+      await expect(result).toContainText(currentName);
+    });
+  }
+
   await page.getByLabel("内容类型").selectOption("术语");
   await page.getByLabel("术语类别").selectOption("goddess_mechanism");
   await page.locator('select[data-filter="goddess"]').selectOption("枢");

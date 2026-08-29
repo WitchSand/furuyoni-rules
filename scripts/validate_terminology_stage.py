@@ -24,6 +24,66 @@ CONTEXT = ROOT / "CONTEXT.md"
 SIGNATURES = ROOT / "data" / "rules" / "source-numeric-signatures.json"
 
 EXPECTED_HASH = "b96c743b343d7522db61af03952db73189283816868b8e8747f289a71801ab98"
+INITIAL_DECISION_ID = "terminology-freeze-2026-08-04"
+REVISION_DECISION_ID = "terminology-revision-2026-08-29"
+BASELINE_TERMS_SHA256 = "04b09feb9f5c9d526828e330cd5b993a22bbb8f53a0e8c3136a4cf42166d3f17"
+FILLED_WORKBOOK_SHA256 = "417bac075dbcea8e752773ad0e3cbb4effab22cfa94a9b781a8f0dc552f1d1f9"
+EXPECTED_REVISION_CHANGES = [
+    {
+        "term_id": "zone.attack-in-progress",
+        "from": "攻击中区",
+        "to": "攻击中",
+        "aliases_before": ["攻击中", "攻击处理区"],
+        "aliases_after": ["攻击处理区", "攻击中区"],
+        "conflict_note_before": "底本可确定区域语义，但未取得可复核简中用名；“攻击中区”“攻击处理区”与直留“攻击中”均需裁决。",
+        "conflict_note_after": "冻结前简中证据不足；2026-08-29 用户依据实卡整体比对明确将规范名从“攻击中区”修订为“攻击中”。",
+    },
+    {
+        "term_id": "goddess.21",
+        "from": "卡姆伊",
+        "to": "神居",
+        "aliases_before": ["KAMUWI", "卡姆依"],
+        "aliases_after": ["KAMUWI", "卡姆依", "卡姆伊"],
+        "conflict_note_before": "无充分简中来源，当前采用音译。",
+        "conflict_note_after": "冻结前无充分简中来源，曾采用音译“卡姆伊”；2026-08-29 用户依据实卡整体比对明确修订为“神居”。",
+    },
+    {
+        "term_id": "goddess.24",
+        "from": "西斯伊",
+        "to": "志水",
+        "aliases_before": ["SHISUI", "锯子", "志水", "紫水"],
+        "aliases_after": ["SHISUI", "锯子", "紫水", "西斯伊"],
+        "conflict_note_before": "无充分简中来源；当前为音译，社区俗称“锯子”不可进入规范正文。",
+        "conflict_note_after": "冻结前无充分简中来源，曾采用音译“西斯伊”；2026-08-29 用户依据实卡整体比对明确修订为“志水”。社区俗称“锯子”仍仅作检索别名。",
+    },
+    {
+        "term_id": "goddess.nonselectable.kodama",
+        "from": "科达玛",
+        "to": "菰珠",
+        "aliases_before": ["KODAMA", "木灵"],
+        "aliases_after": ["KODAMA", "木灵", "科达玛"],
+        "conflict_note_before": "缺少可复核简中来源，当前采用音译；不应在确认前固化。",
+        "conflict_note_after": "冻结前缺少可复核简中来源，曾采用音译“科达玛”；2026-08-29 用户依据实卡整体比对明确修订为“菰珠”。",
+    },
+    {
+        "term_id": "goddess.nonselectable.zanka",
+        "from": "赞卡",
+        "to": "斩华",
+        "aliases_before": ["ZANKA", "斩华"],
+        "aliases_after": ["ZANKA", "赞卡"],
+        "conflict_note_before": "缺少可复核简中来源，当前采用音译；不应在确认前固化。",
+        "conflict_note_after": "冻结前缺少可复核简中来源，曾采用音译“赞卡”；2026-08-29 用户依据实卡整体比对明确修订为“斩华”。",
+    },
+    {
+        "term_id": "goddess.nonselectable.wouka",
+        "from": "沃卡",
+        "to": "奥华",
+        "aliases_before": ["WOUKA", "樱华"],
+        "aliases_after": ["WOUKA", "樱华", "沃卡"],
+        "conflict_note_before": "缺少可复核简中来源，当前采用音译；不应在确认前固化。",
+        "conflict_note_after": "冻结前缺少可复核简中来源，曾采用音译“沃卡”；2026-08-29 用户依据实卡整体比对明确修订为“奥华”。",
+    },
+]
 ID_RE = re.compile(r"^[a-z0-9]+(?:[.-][a-z0-9]+)*$")
 ALLOWED_CATEGORIES = {
     "project_concept",
@@ -154,6 +214,16 @@ def main() -> int:
         check(item.get("evidence_level") in {0, 1, 2, 3, 4}, f"{prefix} 证据等级非法", errors)
 
     schema_doc = load(SCHEMA)
+    check(
+        schema_doc.get("properties", {}).get("schema_version", {}).get("const") == 2,
+        "术语数据模式版本不是 2",
+        errors,
+    )
+    check(
+        "applied_decision_ids" in schema_doc.get("required", []),
+        "术语数据模式未要求 applied_decision_ids",
+        errors,
+    )
     status_enum = (
         schema_doc.get("properties", {})
         .get("terms", {})
@@ -165,9 +235,9 @@ def main() -> int:
     check("locked" in status_enum, "术语数据模式未允许 locked 状态", errors)
 
     decision_record = load(DECISION)
-    check(decision_record.get("schema_version") == 1, "术语确认记录版本不正确", errors)
+    check(decision_record.get("schema_version") == 2, "术语确认记录版本不正确", errors)
     check(
-        decision_record.get("decision_id") == "terminology-freeze-2026-08-04",
+        decision_record.get("decision_id") == INITIAL_DECISION_ID,
         "术语确认记录 ID 不正确",
         errors,
     )
@@ -188,8 +258,66 @@ def main() -> int:
     check(decision_record.get("locked_count") == 171, "术语确认记录锁定数不是 171", errors)
     provisional_ids = set(decision_record.get("provisional_term_ids", []))
     check(len(provisional_ids) == 21, "术语确认记录中的原 provisional ID 不是 21 个", errors)
+    check(
+        decision_record.get("baseline_terms_artifact")
+        == {"commit": "542178b", "sha256": BASELINE_TERMS_SHA256},
+        "术语确认记录未锁定 2026-08-04 术语基线产物",
+        errors,
+    )
+    applied_decision_ids = [INITIAL_DECISION_ID, REVISION_DECISION_ID]
+    check(
+        decision_record.get("current_decision_id") == REVISION_DECISION_ID,
+        "术语确认记录的当前决定 ID 不正确",
+        errors,
+    )
+    check(
+        decision_record.get("applied_decision_ids") == applied_decision_ids,
+        "术语确认记录的决定应用顺序不正确",
+        errors,
+    )
+    amendments = decision_record.get("amendments", [])
+    check(len(amendments) == 1, "术语确认记录应恰有一项后续修订", errors)
+    amendment = amendments[0] if len(amendments) == 1 else {}
+    check(amendment.get("amendment_id") == REVISION_DECISION_ID, "术语修订记录 ID 不正确", errors)
+    check(amendment.get("base_decision_id") == INITIAL_DECISION_ID, "术语修订未指向初始冻结决定", errors)
+    check(amendment.get("confirmed_at") == "2026-08-29", "术语修订日期不正确", errors)
+    check(amendment.get("scope") == "整个规则集", "术语修订适用范围不正确", errors)
+    check(
+        amendment.get("alias_policy")
+        == "从别名中删除新推荐名；将旧推荐名加入别名；按原顺序保序去重。",
+        "术语修订别名策略不正确",
+        errors,
+    )
+    check(
+        amendment.get("source_artifact")
+        == {
+            "filename": "术语修改意见填写表_2026-08-29.xlsx",
+            "sha256": FILLED_WORKBOOK_SHA256,
+            "filled_change_count": 6,
+        },
+        "术语修订填写表记录不正确",
+        errors,
+    )
+    check(
+        amendment.get("term_changes") == EXPECTED_REVISION_CHANGES,
+        "术语修订六项前后值或别名变换不正确",
+        errors,
+    )
+    check(
+        amendment.get("additional_alias_normalization_ids")
+        == ["phase.beginning", "phase.ending"],
+        "历史自指别名清理记录不正确",
+        errors,
+    )
 
     term_doc = load(TERMS)
+    check(term_doc.get("schema_version") == 2, "术语数据版本不是 2", errors)
+    check(term_doc.get("generated_at") == "2026-08-29", "术语数据生成日期不正确", errors)
+    check(
+        term_doc.get("applied_decision_ids") == applied_decision_ids,
+        "术语数据未按顺序应用初始冻结与本次修订",
+        errors,
+    )
     check(term_doc.get("source_pdf_sha256") == EXPECTED_HASH, "术语数据 PDF 哈希不匹配", errors)
     term_items = term_doc.get("terms", [])
     check(len(term_items) == 171, f"术语条目不是 171：{len(term_items)}", errors)
@@ -220,7 +348,11 @@ def main() -> int:
         check(item.get("category") in ALLOWED_CATEGORIES, f"{prefix} 分类非法", errors)
         check(bool(item.get("recommended_zh")), f"{prefix} 缺少推荐简中", errors)
         check(bool(item.get("ja")), f"{prefix} 缺少日文原词", errors)
-        check(isinstance(item.get("aliases"), list), f"{prefix} 别名不是数组", errors)
+        aliases = item.get("aliases")
+        check(isinstance(aliases, list), f"{prefix} 别名不是数组", errors)
+        if isinstance(aliases, list):
+            check(len(aliases) == len(set(aliases)), f"{prefix} 别名存在重复", errors)
+            check(item.get("recommended_zh") not in aliases, f"{prefix} 推荐名与别名重复", errors)
         check(bool(item.get("strict_definition")), f"{prefix} 缺少严格定义", errors)
         check(bool(item.get("plain_explanation")), f"{prefix} 缺少白话说明", errors)
         check(item.get("confidence") in {"high", "medium", "low"}, f"{prefix} 置信度非法", errors)
@@ -260,6 +392,16 @@ def main() -> int:
             check(source_id in source_ids, f"{prefix} 引用未知来源 {source_id}", errors)
 
     term_map = {item["id"]: item for item in term_items}
+    for change in EXPECTED_REVISION_CHANGES:
+        term_id = change["term_id"]
+        if term_id not in term_map:
+            continue
+        term = term_map[term_id]
+        check(term.get("recommended_zh") == change["to"], f"术语 {term_id} 未采用修订后推荐名", errors)
+        check(term.get("aliases") == change["aliases_after"], f"术语 {term_id} 修订后别名不正确", errors)
+        check(term.get("conflict_note") == change["conflict_note_after"], f"术语 {term_id} 修订说明不正确", errors)
+        check(change["from"] in term.get("aliases", []), f"术语 {term_id} 未把旧译加入别名", errors)
+        check(change["to"] not in term.get("aliases", []), f"术语 {term_id} 的新译仍与别名重复", errors)
     for term_id, (expected_page, expected_rule) in EXPECTED_PRIMARY_ANCHORS.items():
         if term_id not in term_map:
             continue
@@ -308,6 +450,34 @@ def main() -> int:
             "术语审核文档未记录用户确认原话",
             errors,
         )
+        check(REVISION_DECISION_ID in review_text, "术语审核文档未记录本次修订 ID", errors)
+        revision_heading = "## 2026-08-29 实卡术语修订"
+        attention_heading = "## 已确认的原冲突与暂定项"
+        complete_heading = "## 完整术语审核表"
+        check(revision_heading in review_text, "术语审核文档缺少本次修订章节", errors)
+        check(attention_heading in review_text, "术语审核文档缺少初始冲突章节", errors)
+        check(complete_heading in review_text, "术语审核文档缺少完整现行术语表", errors)
+        revision_section = review_text.split(revision_heading, 1)[-1].split("## 高频核心词总览", 1)[0]
+        historical_attention_section = review_text.split(attention_heading, 1)[-1].split(
+            complete_heading, 1
+        )[0]
+        for change in EXPECTED_REVISION_CHANGES:
+            term_id = str(change["term_id"])
+            current_aliases = "、".join(str(alias) for alias in change["aliases_after"])
+            check(
+                f"| `{term_id}` | {change['from']} | {change['to']} | {current_aliases} |"
+                in revision_section,
+                f"术语审核文档未精确记录 {term_id} 的修订结果",
+                errors,
+            )
+            term = term_map.get(term_id, {})
+            check(
+                f"| `{term_id}` | {change['from']} | {term.get('ja', '')} | "
+                f"{change['conflict_note_before']} |"
+                in historical_attention_section,
+                f"术语审核文档未保留 {term_id} 的初始名称与冲突说明",
+                errors,
+            )
         decision_section = review_text.split("## 已确认的高影响裁决项", 1)[-1].split("## 重点建议摘要", 1)[0]
         missing_decisions = sorted(
             term_id for term_id in decision_ids if f"`{term_id}`" not in decision_section
@@ -348,6 +518,8 @@ def main() -> int:
             "CONTEXT.md 遗漏冻结术语：" + "、".join(missing_context_terms),
             errors,
         )
+        check("2026-08-04" in context_text, "CONTEXT.md 未记录初始冻结日期", errors)
+        check("2026-08-29" in context_text, "CONTEXT.md 未记录本次修订日期", errors)
 
     duplicate_zh = [name for name, count in Counter(item["recommended_zh"] for item in term_items).items() if count > 1]
     if duplicate_zh:
@@ -360,7 +532,10 @@ def main() -> int:
         "category_counts": dict(sorted(counts.items())),
         "review_status_counts": dict(sorted(status_counts.items())),
         "source_count": len(source_items),
-        "decision_record": "terminology-freeze-2026-08-04",
+        "decision_record": INITIAL_DECISION_ID,
+        "current_decision_id": REVISION_DECISION_ID,
+        "revision_count": len(amendments),
+        "revised_term_count": len(EXPECTED_REVISION_CHANGES),
         "confirmed_provisional_count": len(provisional_ids),
         "high_impact_decision_count": len(decision_ids),
         "conflict_or_provisional_count": len(conflicted_ids),

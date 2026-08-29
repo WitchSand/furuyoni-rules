@@ -43,6 +43,17 @@ def escape(value: object) -> str:
     return str(value).replace("|", "\\|").replace("\n", "<br>")
 
 
+def initial_freeze_view(term: dict, revision_by_id: dict[str, dict]) -> dict:
+    """返回 2026-08-04 冻结时的名称快照，避免用现行名称改写历史。"""
+    result = dict(term)
+    if term["id"] in revision_by_id:
+        change = revision_by_id[term["id"]]
+        result["recommended_zh"] = change["from"]
+        result["aliases"] = change["aliases_before"]
+        result["conflict_note"] = change["conflict_note_before"]
+    return result
+
+
 def evidence_reason(term: dict, source_map: dict[str, dict], was_provisional: bool) -> str:
     ids = [item["source_id"] for item in term["evidence"]]
     levels = [source_map[source_id]["evidence_level"] for source_id in ids]
@@ -53,7 +64,7 @@ def evidence_reason(term: dict, source_map: dict[str, dict], was_provisional: bo
     if has_bilibili and has_fandom:
         return "两个独立社区体系可交叉印证，且与日文规则定义相容。"
     if was_provisional:
-        return "冻结前的简中证据不足；用户已知悉其直译、音译或单一社区工作名属性，并确认采用当前推荐名。"
+        return "冻结前的简中证据不足；用户已知悉其直译、音译或单一社区工作名属性，并于初始冻结时确认采用当时推荐名。"
     if 3 in levels:
         return "可确认社区实际用法，但证据尚未达到受监修层级。"
     if 4 in levels:
@@ -100,7 +111,7 @@ def build_source_doc(source_doc: dict) -> str:
             "",
             "- 半官方模拟器的索引快照可访问，但本次直接请求本地化资源超时；因此没有把未能复核的界面字符串写入术语依据。",
             "- Fandom FAQ 直接访问偶发错误，搜索索引快照可读取；记录为间歇可访问，并由 Bilibili 独立社区材料交叉核对通用词。",
-            "- 女神 Wiki 只完整覆盖较早角色；第 19 至 26 柱女神名不得由该站外推。证据不足的名称在冻结前标为 `provisional`，现已按用户明确确认锁定当前推荐名。",
+            "- 女神 Wiki 只完整覆盖较早角色；第 19 至 26 柱女神名不得由该站外推。证据不足的名称在冻结前标为 `provisional`；初始推荐名已于 2026-08-04 获用户确认，其中 6 项术语于 2026-08-29 又按用户实卡比对结果修订。",
             "- 旧民译作者自述含机器翻译与个人理解；它只负责暴露差异，不负责裁决。",
             "",
         ]
@@ -112,6 +123,11 @@ def build_review_doc(term_doc: dict, source_doc: dict, decision_record: dict) ->
     terms = term_doc["terms"]
     source_map = {item["id"]: item for item in source_doc["sources"]}
     provisional_ids = set(decision_record["provisional_term_ids"])
+    amendments = decision_record.get("amendments", [])
+    if len(amendments) != 1:
+        raise ValueError("术语审核文档要求恰有一项 2026-08-29 修订记录")
+    revision = amendments[0]
+    revision_by_id = {item["term_id"]: item for item in revision["term_changes"]}
     status_counts = Counter(item["review_status"] for item in terms)
     confidence_counts = Counter(item["confidence"] for item in terms)
     category_counts = Counter(item["category"] for item in terms)
@@ -128,13 +144,13 @@ def build_review_doc(term_doc: dict, source_doc: dict, decision_record: dict) ->
     ]
 
     lines = [
-        "# 《散樱乱武 新幕》综合规则 1.14.1 术语审核与冻结记录",
+        "# 《散樱乱武 新幕》综合规则 1.14.1 术语审核、冻结与修订记录",
         "",
-        "审核日期：2026-08-04",
+        "初始审核日期：2026-08-04；最近修订日期：2026-08-29",
         "",
         "## 关卡结论",
         "",
-        "术语审核关卡已经通过。用户明确表示：“接受审核文档全部 171 条推荐方案，包括 21 条 provisional 的当前推荐名。”因此全部推荐简中已转为 `locked`，根目录 `CONTEXT.md` 已成为规范领域语言入口。原冲突、置信度和冻结前状态继续保留，便于追溯，不表示仍待裁决。",
+        "术语审核关卡已经通过。用户于 2026-08-04 明确表示：“接受审核文档全部 171 条推荐方案，包括 21 条 provisional 的当前推荐名。”全部术语由此转为 `locked`。2026-08-29，用户依据实卡整体比对明确修订其中 6 条；所有词条继续保持 `locked`，根目录 `CONTEXT.md` 显示现行规范名。原冲突、置信度和冻结前状态继续保留，便于追溯，不表示仍待裁决。",
         "",
         f"- 术语总数：{len(terms)}",
         f"- `locked`：{status_counts['locked']}",
@@ -144,13 +160,33 @@ def build_review_doc(term_doc: dict, source_doc: dict, decision_record: dict) ->
         "- 女神覆盖：26 个可选女神 + 4 个不可选但会作为使用者出现的女神",
         "- 专属机制覆盖：54 项",
         "",
+        "## 2026-08-29 实卡术语修订",
+        "",
+        f"- 修订 ID：`{revision['amendment_id']}`",
+        f"- 适用范围：{revision['scope']}。",
+        f"- 依据边界：{revision['evidence_basis']}",
+        f"- 别名处理：{revision['alias_policy']}",
+        "",
+        "| 稳定 ID | 2026-08-04 初始冻结名 | 现行推荐名 | 现行别名 |",
+        "| --- | --- | --- | --- |",
+    ]
+    for change in revision["term_changes"]:
+        lines.append(
+            f"| `{escape(change['term_id'])}` | {escape(change['from'])} | "
+            f"{escape(change['to'])} | {escape('、'.join(change['aliases_after']))} |"
+        )
+
+    lines.extend(
+        [
+        "",
         f"## 高频核心词总览（{len(frequent_core_terms)} 项）",
         "",
         "下列词会跨章节反复出现在规则正文、导航、检索或交互标签中。全部推荐名均已确认；冲突提示只保留冻结时的考据背景。",
         "",
         "| 稳定 ID | 推荐简中 | 日文原词 | 主要别名 | 影响／置信度 | 冲突或状态提示 |",
         "| --- | --- | --- | --- | --- | --- |",
-    ]
+        ]
+    )
     for item in frequent_core_terms:
         lines.append(
             "| "
@@ -187,17 +223,18 @@ def build_review_doc(term_doc: dict, source_doc: dict, decision_record: dict) ->
         ]
     )
     for item in decision_terms:
+        historical_item = initial_freeze_view(item, revision_by_id)
         lines.append(
             "| "
             + " | ".join(
                 [
                     f"`{escape(item['id'])}`",
-                    escape(item["recommended_zh"]),
-                    escape(item["ja"]),
-                    escape("、".join(item["aliases"]) or "—"),
-                    escape(evidence_reason(item, source_map, item["id"] in provisional_ids)),
-                    escape(item["conflict_note"] or "冻结前证据等级不足；当前推荐名已获确认。"),
-                    f"`{item['review_status']}` / {item['confidence']}",
+                    escape(historical_item["recommended_zh"]),
+                    escape(historical_item["ja"]),
+                    escape("、".join(historical_item["aliases"]) or "—"),
+                    escape(evidence_reason(historical_item, source_map, item["id"] in provisional_ids)),
+                    escape(historical_item["conflict_note"] or "冻结前证据等级不足；初始推荐名当时已获确认。"),
+                    f"`{historical_item['review_status']}` / {historical_item['confidence']}",
                 ]
             )
             + " |"
@@ -217,7 +254,7 @@ def build_review_doc(term_doc: dict, source_doc: dict, decision_record: dict) ->
             "- 已确认采用“攻击距离”对应 `適正距離`，把“适正距离／适当距离”保留为检索别名。",
             "- 已确认采用“纳”“装附”“重铸牌库”，其替代写法只保留为考据记录或检索别名。",
             "- 已确认 `状況起因` 为“状态触发处理”，`保有者` 为“所有者”。",
-            "- 已确认第 19 至 26 柱当前推荐名，包括冻结前仅有暂定音译证据的卡姆伊、西斯伊、伊尼尔。",
+            "- 第 19 至 26 柱现行推荐名均已确认；其中神居、志水于 2026-08-29 由用户依据实卡整体比对修订，伊尼尔沿用初始冻结名。",
             "",
             "## 已确认的原冲突与暂定项",
             "",
@@ -228,13 +265,14 @@ def build_review_doc(term_doc: dict, source_doc: dict, decision_record: dict) ->
         ]
     )
     for item in all_attention:
+        historical_item = initial_freeze_view(item, revision_by_id)
         anchors = "；".join(
             f"{location['part']} PDF {location['pdf_page']} / {location['rule']}"
             for location in item["anchors"]
         )
         lines.append(
-            f"| `{escape(item['id'])}` | {escape(item['recommended_zh'])} | {escape(item['ja'])} | "
-            f"{escape(item['conflict_note'] or '冻结前证据不足；当前推荐名已确认。')} | {escape(anchors)} |"
+            f"| `{escape(item['id'])}` | {escape(historical_item['recommended_zh'])} | {escape(item['ja'])} | "
+            f"{escape(historical_item['conflict_note'] or '冻结前证据不足；初始推荐名当时已确认。')} | {escape(anchors)} |"
         )
 
     lines.extend(["", "## 完整术语审核表", ""])
@@ -275,12 +313,12 @@ def build_review_doc(term_doc: dict, source_doc: dict, decision_record: dict) ->
 
     lines.extend(
         [
-            "## 术语冻结后的明确入口",
+            "## 现行术语入口",
             "",
-            "1. `issues/05-lock-terms-and-context.md` 已完成，确认原文另存于 `data/glossary/decision-record.json`。",
-            "2. 规范领域语言已生成到根目录 `CONTEXT.md`；全文翻译必须使用其中的冻结名称。",
-            "3. 下一阶段从 `issues/06-full-rule-translation.md` 开始，完成 86 页全文翻译与双轮校对。",
-            "4. 在全文翻译完成前，`issues/07-static-site-build.md` 仍不得开始。",
+            "1. `data/glossary/decision-record.json` 完整保留 2026-08-04 初始冻结与 2026-08-29 六项修订事件。",
+            "2. 根目录 `CONTEXT.md` 是现行规范领域语言入口；全文必须使用其中的粗体推荐名。",
+            "3. `data/glossary/terms.json` 提供现行推荐名与检索别名；旧译只作为别名和历史审计信息保留。",
+            "4. 后续术语变更仍须取得用户新的明确决定，并同步生成器、结构化数据、全文和校验器。",
             "",
         ]
     )

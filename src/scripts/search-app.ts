@@ -1,8 +1,16 @@
+import { glossaryTermMatchesQuery } from "../lib/search-normalization";
+import type { GlossaryTerm } from "../lib/content-model";
+
 interface PagefindResultData {
   url: string;
   excerpt: string;
   meta: { title?: string };
   filters?: Record<string, string | string[]>;
+}
+
+interface GlossaryPayload {
+  terms: GlossaryTerm[];
+  routes: Record<string, string>;
 }
 
 interface PagefindSearchResult {
@@ -26,6 +34,7 @@ class SearchAppElement extends HTMLElement {
   private status?: HTMLElement;
   private results?: HTMLOListElement;
   private selects: HTMLSelectElement[] = [];
+  private glossary?: GlossaryPayload;
 
   connectedCallback(): void {
     this.form = this.querySelector("form") ?? undefined;
@@ -50,6 +59,9 @@ class SearchAppElement extends HTMLElement {
       this.pagefind = (await import(/* @vite-ignore */ `${base}pagefind/pagefind.js`)) as PagefindModule;
       await this.pagefind.init();
       await this.pagefind.options?.({ baseUrl: base });
+      const glossaryResponse = await fetch(`${base}data/glossary.json`);
+      if (!glossaryResponse.ok) throw new Error(`术语数据载入失败：${glossaryResponse.status}`);
+      this.glossary = (await glossaryResponse.json()) as GlossaryPayload;
       this.classList.add("is-ready");
       if (this.input?.value.trim()) await this.runSearch(false);
       else this.setStatus("输入推荐简中、日文、社区别名、女神名、规则编号或卡号。", false);
@@ -85,7 +97,8 @@ class SearchAppElement extends HTMLElement {
       const response = await this.pagefind.search(query, {
         filters: Object.keys(filters).length ? filters : undefined,
       });
-      const data = await Promise.all(response.results.map((result) => result.data()));
+      const pagefindData = await Promise.all(response.results.map((result) => result.data()));
+      const data = this.mergeGlossaryMatches(pagefindData, query, filters);
       this.renderResults(data);
       this.setStatus(`找到 ${data.length} 条结果。`, false);
       if (updateUrl) this.updateUrl(query, filters);
@@ -93,6 +106,43 @@ class SearchAppElement extends HTMLElement {
       this.setStatus("搜索失败，请调整关键词后重试。", false);
       console.error(error);
     }
+  }
+
+  private mergeGlossaryMatches(
+    pagefindData: PagefindResultData[],
+    query: string,
+    filters: Record<string, string>,
+  ): PagefindResultData[] {
+    if (!this.glossary || filters.kind === "规则" || filters.goddess) return pagefindData;
+    const directMatches = this.glossary.terms
+      .filter((term) => !filters.category || term.category === filters.category)
+      .filter((term) => !filters.confidence || term.confidence === filters.confidence)
+      .filter((term) => glossaryTermMatchesQuery(term, query))
+      .map((term) => ({
+        url: this.glossary!.routes[term.id],
+        excerpt: `规范术语：${this.escapeHtml(term.recommended_zh)}；别名：${this.escapeHtml(term.aliases.join("、") || "无")}`,
+        meta: { title: `${term.recommended_zh}｜术语` },
+        filters: {
+          kind: "术语",
+          category: term.category,
+          confidence: term.confidence,
+        },
+      }));
+    const seen = new Set(directMatches.map((item) => item.url));
+    return [...directMatches, ...pagefindData.filter((item) => !seen.has(item.url))];
+  }
+
+  private escapeHtml(value: string): string {
+    return value.replace(/[&<>"']/g, (character) => {
+      const entities: Record<string, string> = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;",
+      };
+      return entities[character];
+    });
   }
 
   private renderResults(items: PagefindResultData[]): void {
