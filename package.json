@@ -37,7 +37,7 @@
     "smoke:deployment": "node scripts/smoke-deployment.mjs"
   },
   "dependencies": {
-    "astro": "7.1.6",
+    "astro": "7.2.9",
     "markdown-it": "15.0.0",
     "pagefind": "1.5.2"
   },
