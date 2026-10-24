@@ -1,6 +1,6 @@
 # GitHub Pages 部署说明
 
-最后更新：2026-08-29
+最后更新：2026-10-24
 
 ## 公开地址
 
@@ -13,7 +13,7 @@
 
 ## 构建环境与命令
 
-- Node.js：`>=22.12.0`；
+- Node.js：`>=22.23.4`；
 - npm：`>=9.6.5`；
 - 依赖安装：`npm ci`；
 - 根路径构建：`npm run build`，输出 `dist/`；
@@ -32,7 +32,7 @@ npm run audit:pages
 
 `.github/workflows/pages.yml` 在 Pull Request、`main` 推送和手动运行时触发：
 
-1. 使用 Node.js 22 执行 `npm ci`；
+1. 使用 Node.js 22 的最新补丁版（至少 22.23.4）执行 `npm ci`；
 2. 安装 Playwright Chromium；
 3. 执行公开源码与 Git 历史卫生审计、生产依赖高危审计、单元测试和类型检查；
 4. 串行生成根路径与 Pages 子路径构建；

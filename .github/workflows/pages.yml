@@ -23,10 +23,11 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
-      - name: 设置 Node.js 22
+      - name: 设置 Node.js 22 最新补丁版
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 22
+          check-latest: true
           cache: npm
       - name: 安装依赖
         run: npm ci

@@ -15,7 +15,7 @@
     "url": "https://github.com/WitchSand/furuyoni-rules/issues"
   },
   "engines": {
-    "node": ">=22.12.0",
+    "node": ">=22.23.4",
     "npm": ">=9.6.5"
   },
   "scripts": {
@@ -37,7 +37,7 @@
     "smoke:deployment": "node scripts/smoke-deployment.mjs"
   },
   "dependencies": {
-    "astro": "7.3.5",
+    "astro": "7.4.2",
     "markdown-it": "15.0.3",
     "pagefind": "1.5.2"
   },
@@ -45,8 +45,8 @@
     "@astrojs/check": "0.9.10",
     "@axe-core/playwright": "4.13.0",
     "@playwright/test": "1.63.0",
-    "@types/node": "26.6.4",
+    "@types/node": "26.6.5",
     "typescript": "5.9.3",
-    "vitest": "5.0.3"
+    "vitest": "5.0.5"
   }
 }
