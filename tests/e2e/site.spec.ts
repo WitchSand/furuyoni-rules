@@ -192,6 +192,7 @@ test("禁用 JavaScript 后正文、章节导航、术语链接与深链接仍�
   const response = await page.goto("http://127.0.0.1:4321/rules/core/10/#rule-10-44");
   expect(response?.status()).toBe(200);
   await expect(page.locator("#rule-10-44")).toContainText("结算卡牌效果时适用的效果");
+  await expect(page.locator(".brand")).toHaveAccessibleName(/^散樱乱武 新幕\s*（首页）$/);
   await expect(page.locator(".site-nav")).toBeVisible();
   await expect(page.locator("term-reference a").first()).toHaveAttribute("href", /\/glossary\/.+\/$/);
   await expect(page.locator(".term-window")).toHaveCount(0);
@@ -237,6 +238,9 @@ test("桌面宽屏、200% 重排代理及代表页通过 WCAG A/AA 自动检查"
   for (const route of representativeRoutes) {
     await page.goto(route);
     await expectNoHorizontalOverflow(page);
+    await expect(page.locator(".brand")).toHaveAccessibleName(
+      /^散樱乱武 新幕\s*综合规则 1\.14\.1 · 简中民间翻译\s*（首页）$/,
+    );
     const results = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
     expect(results.violations, `${route} 的无障碍违规`).toEqual([]);
   }

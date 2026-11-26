@@ -9,9 +9,12 @@ const { base } = Astro.props;
 ---
 
 <header class="site-header">
-  <a class="brand" href={sitePath("/", base)} aria-label="《散樱乱武 新幕》综合规则简中站首页">
+  <a class="brand" href={sitePath("/", base)}>
     <span class="brand-mark" aria-hidden="true">樱</span>
-    <span><strong>散樱乱武 新幕</strong><small>综合规则 1.14.1 · 简中民间翻译</small></span>
+    <span>
+      <strong>散樱乱武 新幕</strong><small>综合规则 1.14.1 · 简中民间翻译</small>
+      <span class="visually-hidden">（首页）</span>
+    </span>
   </a>
   <nav class="header-actions" aria-label="站点快捷入口">
     <a href={sitePath("/search/", base)}>全文搜索</a>

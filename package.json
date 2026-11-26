@@ -37,15 +37,15 @@
     "smoke:deployment": "node scripts/smoke-deployment.mjs"
   },
   "dependencies": {
-    "astro": "7.4.2",
+    "astro": "7.4.7",
     "markdown-it": "15.0.3",
     "pagefind": "1.5.2"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.10",
-    "@axe-core/playwright": "4.13.0",
-    "@playwright/test": "1.63.0",
-    "@types/node": "26.6.5",
+    "@astrojs/check": "0.9.12",
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "@types/node": "26.6.6",
     "typescript": "5.9.3",
     "vitest": "5.0.5"
   }
